@@ -15,6 +15,10 @@ public class TelemetryDataDto implements Serializable {
      * Variabile time
      */
     public long time;
+    
+    /**
+     * freeMemory
+     */
     public long freeMemory;
     public long maxMemory;
     public long totalMemory;

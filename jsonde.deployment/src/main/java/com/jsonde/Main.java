@@ -118,7 +118,7 @@ public class Main {
                         outputStream.write((byte)i);
                     }
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    
                 } finally {
                     IO.close(outputStream);
                 }

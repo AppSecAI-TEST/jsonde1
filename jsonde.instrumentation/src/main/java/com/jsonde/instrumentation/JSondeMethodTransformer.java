@@ -8,6 +8,11 @@ import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.commons.AdviceAdapter;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class JSondeMethodTransformer extends AdviceAdapter {
 
     private final long methodId;

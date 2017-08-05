@@ -13,6 +13,10 @@ import java.util.Map;
 public class MethodCallSummaryDto implements Serializable {
 
     private Map<Long, MethodCallSummaryDto> callees = new HashMap<Long, MethodCallSummaryDto>();
+    
+    /**
+     * caller
+     */
     public MethodCallSummaryDto caller;
 
     public long methodId;

@@ -11,6 +11,10 @@ public class MethodCallSummary extends AbstractMethodCall {
 	 * Variabile executionTime
 	 */
     public Long executionTime;
+    
+    /**
+     * throwExceptionCounter;
+     */
     public Long throwExceptionCounter;
     public Long invocationCount;
 

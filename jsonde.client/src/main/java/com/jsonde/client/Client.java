@@ -130,7 +130,7 @@ public class Client implements MessageListener {
             DaoFactory.createSchema();
 
         } catch (DaoException e) {
-            e.printStackTrace();
+           
         }
         networkClient = new NetworkClientImpl(address, port);
     }

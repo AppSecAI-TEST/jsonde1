@@ -1,7 +1,6 @@
 package com.jsonde.gui.action.reports;
 
 import com.jsonde.gui.ApplicationUserInterface;
-import com.jsonde.gui.Main;
 import com.jsonde.gui.action.composite.CreateCompositeComponentTabAction;
 import com.jsonde.gui.components.composite.CompositeComponentProvider;
 import com.jsonde.gui.reports.Report;

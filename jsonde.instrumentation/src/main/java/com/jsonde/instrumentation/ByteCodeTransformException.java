@@ -1,5 +1,10 @@
 package com.jsonde.instrumentation;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ByteCodeTransformException extends Exception {
 
     public ByteCodeTransformException() {

@@ -25,7 +25,10 @@ public abstract class Profiler {
     public static final String CLASS_CANONICAL_NAME = Profiler.class.getCanonicalName();
 
     private static final Log log = Log.getLog(Profiler.class);
-
+    
+    /**
+	 * UNDEFINED_CLASS_ID
+	 */
     public static final long UNDEFINED_CLASS_ID = -1;
     public static final long UNDEFINED_METHOD_ID = -1;
 
