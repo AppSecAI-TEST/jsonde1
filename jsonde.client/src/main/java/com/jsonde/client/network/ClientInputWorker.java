@@ -11,6 +11,11 @@ import java.io.ObjectInputStream;
 import java.net.Socket;
 import java.net.SocketException;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ClientInputWorker implements Runnable {
 
     private final static Log log = Log.getLog(ClientInputWorker.class);

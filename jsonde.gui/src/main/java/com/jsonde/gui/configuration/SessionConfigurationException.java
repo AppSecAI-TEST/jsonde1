@@ -1,5 +1,10 @@
 package com.jsonde.gui.configuration;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class SessionConfigurationException extends Exception {
 
     public SessionConfigurationException() {

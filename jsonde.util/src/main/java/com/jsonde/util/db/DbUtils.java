@@ -7,6 +7,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class DbUtils {
 
     private static final Log log = Log.getLog(DbUtils.class);

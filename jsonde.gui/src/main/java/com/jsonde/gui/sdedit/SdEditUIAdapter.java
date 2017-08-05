@@ -42,6 +42,11 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Enumeration;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class SdEditUIAdapter implements MethodCallListener, ApplicationUserInterface, ClassListener {
 
     private UserInterface userInterface;

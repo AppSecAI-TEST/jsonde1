@@ -4,6 +4,11 @@ import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public abstract class ListSelectionListenerAction
         extends AbstractAction implements
         ListSelectionListener {

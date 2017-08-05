@@ -20,6 +20,11 @@ import java.lang.instrument.Instrumentation;
 import java.net.URL;
 import java.security.ProtectionDomain;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class JSondeAgent implements MessageListener, ClassFileTransformer {
 
     private final static Log log = Log.getLog(JSondeAgent.class);

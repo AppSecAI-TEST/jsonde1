@@ -4,6 +4,11 @@ import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class FiltersTablePanel extends JPanel {
 
     private JTable filtersTable;

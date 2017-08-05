@@ -6,6 +6,11 @@ import com.jsonde.util.io.IO;
 import javax.swing.*;
 import java.io.*;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class Main {
 
     private final static String JAVA_BIN;

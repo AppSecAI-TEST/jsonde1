@@ -5,6 +5,11 @@ import java.lang.ref.ReferenceQueue;
 import java.util.*;
 import java.util.concurrent.ThreadFactory;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class HeapAnalyzer extends ReferenceQueue<Object> implements Runnable {
 
     private Map<Long, ClassHeapData> heapData = Collections.synchronizedMap(

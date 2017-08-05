@@ -1,5 +1,10 @@
 package com.jsonde.client.dao;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class DaoException extends Exception {
 
     public DaoException() {

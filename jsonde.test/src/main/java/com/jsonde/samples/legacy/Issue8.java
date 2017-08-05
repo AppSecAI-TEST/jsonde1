@@ -1,5 +1,10 @@
 package com.jsonde.samples.legacy;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 class JMSManager {
 
     public void createConnection() {
@@ -13,6 +18,11 @@ class JMSManager {
 
 }
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class Issue8 {
 
     public static void main(String[] arguments) throws Exception {

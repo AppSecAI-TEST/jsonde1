@@ -2,6 +2,11 @@ package com.jsonde.api.function.echo;
 
 import com.jsonde.api.function.FunctionResponse;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class EchoFunctionResponse extends FunctionResponse<EchoFunctionRequest> {
 
     private String message;

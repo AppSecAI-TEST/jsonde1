@@ -3,6 +3,11 @@ package com.jsonde.samples.legacy;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 class A {
 
     void operation1() {
@@ -10,6 +15,11 @@ class A {
 
 }
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class SimpleApp1 {
 
     public static void main(String[] arguments) throws Exception {

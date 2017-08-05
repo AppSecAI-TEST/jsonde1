@@ -4,6 +4,11 @@ import javax.swing.*;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class DefaultListPaneModel implements ListPaneModel {
 
     private List<String> labelsList;

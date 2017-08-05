@@ -9,6 +9,11 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ClientOutputWorker implements Runnable {
 
     private final static Log log = Log.getLog(ClientOutputWorker.class);

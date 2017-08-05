@@ -4,6 +4,11 @@ import com.jsonde.client.domain.MethodCall;
 
 import javax.swing.tree.DefaultMutableTreeNode;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class Node extends DefaultMutableTreeNode {
 
     private String value;

@@ -8,6 +8,11 @@ import java.io.ObjectInput;
 import java.io.ObjectOutput;
 import java.util.List;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class MethodCallMessage extends Message implements Externalizable {
 
     private transient MethodCallDto[] methodCallDtos;

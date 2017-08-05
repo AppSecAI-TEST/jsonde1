@@ -7,6 +7,11 @@ import com.jsonde.gui.reports.custom.DependencyReport;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class OpenMethodCallProfilerViewAction extends AbstractAction {
 
     private ApplicationUserInterface applicationUserInterface;

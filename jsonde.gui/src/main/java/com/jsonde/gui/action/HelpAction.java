@@ -12,6 +12,11 @@ import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class HelpAction extends AbstractAction {
 
     private ApplicationUserInterface applicationUserInterface;

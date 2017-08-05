@@ -1,5 +1,10 @@
 package com.jsonde.util;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ObjectIsAbsentException extends Exception {
 
     public ObjectIsAbsentException() {

@@ -7,6 +7,11 @@ import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class SimpleFiltersPanel extends JPanel implements FiltersPanel {
 
     private JTextField packageFilter;

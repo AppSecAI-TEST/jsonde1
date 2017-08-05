@@ -8,6 +8,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.Map;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class AboutDialog extends JSondeDialog {
 
     public AboutDialog() {

@@ -23,6 +23,11 @@ import java.awt.*;
 import java.sql.*;
 import java.util.*;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ReportCompositeComponentProvider implements CompositeComponentProvider {
 
     private Report report;

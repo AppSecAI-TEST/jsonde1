@@ -1,5 +1,10 @@
 package com.jsonde.samples.legacy;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class Issue9 {
 
     public Issue9() throws Exception {

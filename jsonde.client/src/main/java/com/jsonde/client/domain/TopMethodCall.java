@@ -1,6 +1,10 @@
 package com.jsonde.client.domain;
 
-
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class TopMethodCall extends DomainObject {
 
     private long methodCallId;

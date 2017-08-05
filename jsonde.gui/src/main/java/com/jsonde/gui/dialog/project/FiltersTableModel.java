@@ -7,6 +7,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class FiltersTableModel extends AbstractTableModel {
 
     private List<ClassFilterDto> classFilters;

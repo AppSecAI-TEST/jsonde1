@@ -9,6 +9,11 @@ import java.util.jar.JarFile;
 import java.util.jar.Manifest;
 import java.util.regex.Pattern;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ResolveAgentLibrariesClassLoader extends URLClassLoader {
 
     private static String jSondeLibrariesRegexp;

@@ -3,6 +3,11 @@ package com.jsonde.profiler.heap;
 import java.lang.ref.ReferenceQueue;
 import java.lang.ref.WeakReference;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class HeapAnalyzerReference extends WeakReference<Object> {
 
     private final long constructorId;

@@ -8,6 +8,11 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ThreadLocalProfiler {
 
     private int maxMethodCallGraphSize = 2000;

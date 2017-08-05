@@ -10,6 +10,11 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.File;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "session")
 public class SessionConfiguration {

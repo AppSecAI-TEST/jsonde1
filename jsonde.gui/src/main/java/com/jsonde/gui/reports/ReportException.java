@@ -1,5 +1,10 @@
 package com.jsonde.gui.reports;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ReportException extends Exception {
 
     public ReportException() {

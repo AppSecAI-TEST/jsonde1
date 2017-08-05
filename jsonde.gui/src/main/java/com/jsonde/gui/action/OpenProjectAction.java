@@ -13,6 +13,11 @@ import javax.swing.filechooser.FileFilter;
 import java.awt.event.ActionEvent;
 import java.io.File;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class OpenProjectAction extends AbstractAction {
 
     private ApplicationUserInterface applicationUserInterface;

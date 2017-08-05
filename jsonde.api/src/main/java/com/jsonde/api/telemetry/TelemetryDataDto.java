@@ -2,6 +2,11 @@ package com.jsonde.api.telemetry;
 
 import java.io.Serializable;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class TelemetryDataDto implements Serializable {
 
     private static final long serialVersionUID = -4872627251132927940L;

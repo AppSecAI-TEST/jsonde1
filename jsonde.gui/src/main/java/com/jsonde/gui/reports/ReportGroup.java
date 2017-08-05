@@ -3,6 +3,11 @@ package com.jsonde.gui.reports;
 import javax.xml.bind.annotation.*;
 import java.util.List;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "report-group")
 public class ReportGroup {

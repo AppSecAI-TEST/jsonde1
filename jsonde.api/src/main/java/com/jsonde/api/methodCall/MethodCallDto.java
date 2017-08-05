@@ -2,6 +2,11 @@ package com.jsonde.api.methodCall;
 
 import java.io.Serializable;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class MethodCallDto implements Serializable {
 
 	/**

@@ -2,6 +2,11 @@ package com.jsonde.client.domain;
 
 import java.io.Serializable;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public abstract class DomainObject implements Serializable {
 
     private long id;

@@ -12,6 +12,11 @@ import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ReportDao extends AbstractDao {
 
     public ReportDao(DataSource dataSource) {

@@ -4,6 +4,11 @@ import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLClassLoader;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class Application3 extends URLClassLoader {
 
     public Application3() {

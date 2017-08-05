@@ -16,6 +16,11 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.io.File;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class NewLocalSunJVMProjectAction extends AbstractAction {
 
     private SdEditUIAdapter sdEditUIAdapter;

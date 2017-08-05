@@ -3,6 +3,11 @@ package com.jsonde.api.serialization;
 import java.io.IOException;
 import java.io.ObjectInput;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class PoolableObjectInput extends ObjectInputDecorator {
 
     public PoolableObjectInput(ObjectInput target) {

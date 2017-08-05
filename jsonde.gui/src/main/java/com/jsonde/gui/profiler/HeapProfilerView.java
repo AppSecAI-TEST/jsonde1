@@ -10,6 +10,11 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class HeapProfilerView extends JPanel {
 
     private Client client;

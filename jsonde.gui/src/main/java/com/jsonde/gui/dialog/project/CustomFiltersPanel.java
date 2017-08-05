@@ -9,6 +9,11 @@ import java.awt.event.ActionEvent;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class CustomFiltersPanel extends JPanel implements FiltersPanel {
 
     private FiltersTableModel filtersTableModel;

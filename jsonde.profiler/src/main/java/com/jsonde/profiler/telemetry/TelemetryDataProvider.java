@@ -8,6 +8,11 @@ import java.lang.management.ClassLoadingMXBean;
 import java.lang.management.CompilationMXBean;
 import java.lang.management.ManagementFactory;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class TelemetryDataProvider implements Runnable {
 
     private Profiler profiler;

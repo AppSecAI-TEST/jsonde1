@@ -4,6 +4,11 @@ import com.jsonde.client.domain.TopMethodCall;
 
 import javax.sql.DataSource;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class TopMethodCallDao extends AbstractEntityDao<TopMethodCall> {
 
     public TopMethodCallDao(DataSource dataSource) throws DaoException {

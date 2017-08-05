@@ -4,6 +4,11 @@ import com.jsonde.api.Message;
 
 import java.util.Arrays;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class RegisterClassMessage extends Message {
 
     private long classId;

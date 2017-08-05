@@ -2,6 +2,11 @@ package com.jsonde.api.configuration;
 
 import java.io.Serializable;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ClassFilterDto implements Serializable {
 
     private boolean inclusive;

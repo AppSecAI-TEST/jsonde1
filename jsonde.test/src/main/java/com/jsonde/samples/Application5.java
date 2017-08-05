@@ -1,5 +1,10 @@
 package com.jsonde.samples;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class Application5 {
 
     public Application5(String[] strings, int arg1, int arg2) {

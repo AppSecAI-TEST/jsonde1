@@ -1,5 +1,10 @@
 package com.jsonde.samples.legacy;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class Issue13 {
 
     public static void main(String[] arguments) throws Exception {

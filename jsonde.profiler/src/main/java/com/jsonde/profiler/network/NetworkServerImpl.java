@@ -13,6 +13,11 @@ import java.util.Vector;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class NetworkServerImpl implements NetworkServer {
 
     private static final Log log = Log.getLog(NetworkServerImpl.class);

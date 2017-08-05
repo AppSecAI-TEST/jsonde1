@@ -2,6 +2,11 @@ package com.jsonde.api.function.heap;
 
 import java.io.Serializable;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ClassHeapDataDto implements Serializable {
 
     private long constructorId;

@@ -5,6 +5,11 @@ import com.jsonde.util.log.Log;
 import java.io.Closeable;
 import java.io.IOException;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class IO {
 
     private static final Log log = Log.getLog(IO.class);

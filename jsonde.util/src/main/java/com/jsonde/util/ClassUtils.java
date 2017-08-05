@@ -8,6 +8,11 @@ import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ClassUtils {
 
 	/**

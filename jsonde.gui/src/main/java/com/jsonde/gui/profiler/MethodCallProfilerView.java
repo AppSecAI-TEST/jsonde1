@@ -14,6 +14,11 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class MethodCallProfilerView extends JPanel {
 
     private static class MethodCallProfilerNode {

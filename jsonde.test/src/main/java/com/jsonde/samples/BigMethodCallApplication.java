@@ -1,5 +1,10 @@
 package com.jsonde.samples;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class BigMethodCallApplication {
 
     public static void main(String... arguments) throws Exception {

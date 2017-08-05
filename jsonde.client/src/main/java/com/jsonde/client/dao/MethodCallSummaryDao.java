@@ -13,6 +13,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class MethodCallSummaryDao extends AbstractEntityDao<MethodCallSummary> {
 
     public MethodCallSummaryDao(DataSource dataSource) throws DaoException {

@@ -10,6 +10,11 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class Main {
 
     private static Main instance;

@@ -7,6 +7,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class NewProjectDialog extends JSondeDialog {
 
     private FieldsPanel fieldsPanel;

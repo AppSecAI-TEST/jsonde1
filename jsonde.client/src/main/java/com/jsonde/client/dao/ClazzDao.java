@@ -4,6 +4,11 @@ import com.jsonde.client.domain.Clazz;
 
 import javax.sql.DataSource;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ClazzDao extends AbstractEntityDao<Clazz> {
 
     public ClazzDao(DataSource dataSource) throws DaoException {

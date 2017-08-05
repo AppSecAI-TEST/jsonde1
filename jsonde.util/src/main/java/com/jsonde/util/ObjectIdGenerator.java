@@ -4,6 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ObjectIdGenerator<T> {
 
     private AtomicLong sequence = new AtomicLong();

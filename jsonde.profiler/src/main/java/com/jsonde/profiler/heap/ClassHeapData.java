@@ -1,5 +1,10 @@
 package com.jsonde.profiler.heap;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ClassHeapData {
 
     private long createCounter;

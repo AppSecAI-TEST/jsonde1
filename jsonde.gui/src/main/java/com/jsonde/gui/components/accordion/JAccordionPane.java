@@ -2,6 +2,11 @@ package com.jsonde.gui.components.accordion;
 
 import javax.swing.*;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class JAccordionPane {
 
     private String title;

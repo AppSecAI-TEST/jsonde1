@@ -4,6 +4,11 @@ import com.jsonde.api.Message;
 
 import java.util.concurrent.atomic.AtomicLong;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public abstract class FunctionRequest<T extends FunctionResponse> extends Message {
 
     private final static AtomicLong requestIdSequence = new AtomicLong();

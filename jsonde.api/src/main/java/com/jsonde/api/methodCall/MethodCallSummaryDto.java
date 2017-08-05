@@ -5,6 +5,11 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class MethodCallSummaryDto implements Serializable {
 
     private Map<Long, MethodCallSummaryDto> callees = new HashMap<Long, MethodCallSummaryDto>();

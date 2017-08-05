@@ -3,6 +3,11 @@ package com.jsonde.util.log;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class Log {
 
     private final Class clazz;

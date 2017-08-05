@@ -1,6 +1,10 @@
 package com.jsonde.samples;
 
-
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class Application6 {
 
     public static void main(String... arguments) throws Exception {

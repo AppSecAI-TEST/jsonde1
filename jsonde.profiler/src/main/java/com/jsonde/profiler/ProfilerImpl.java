@@ -34,6 +34,11 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ProfilerImpl extends Profiler implements MessageListener {
 
     private static final Log log = Log.getLog(ProfilerImpl.class);

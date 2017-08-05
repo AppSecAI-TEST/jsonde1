@@ -7,6 +7,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class JActionIcon extends JLabel implements MouseListener {
 
     private Border emptyBorder = BorderFactory.createEmptyBorder(2, 2, 2, 2);

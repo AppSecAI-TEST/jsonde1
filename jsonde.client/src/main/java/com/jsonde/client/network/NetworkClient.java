@@ -5,6 +5,11 @@ import com.jsonde.api.MessageListener;
 import com.jsonde.api.function.FunctionRequest;
 import com.jsonde.api.function.FunctionResponse;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public interface NetworkClient {
 
     void start() throws NetworkClientException;

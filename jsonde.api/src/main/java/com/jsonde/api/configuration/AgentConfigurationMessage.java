@@ -4,6 +4,11 @@ import com.jsonde.api.Message;
 
 import java.util.List;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class AgentConfigurationMessage extends Message {
 
     private String version;

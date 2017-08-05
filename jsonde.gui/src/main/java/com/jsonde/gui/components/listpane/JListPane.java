@@ -8,6 +8,11 @@ import java.awt.event.*;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class JListPane extends JList {
 
     private List<ActionListener> actionListeners = new LinkedList<ActionListener>();

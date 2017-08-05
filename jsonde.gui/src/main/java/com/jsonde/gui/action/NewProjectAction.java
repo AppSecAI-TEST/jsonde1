@@ -13,6 +13,11 @@ import net.sf.sdedit.icons.Icons;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class NewProjectAction extends AbstractAction {
 
     private SdEditUIAdapter sdEditUIAdapter;

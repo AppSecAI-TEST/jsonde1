@@ -6,6 +6,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class JActionLabel extends JLabel implements MouseListener {
 
     private Action action;

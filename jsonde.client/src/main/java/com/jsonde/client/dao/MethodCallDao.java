@@ -10,6 +10,11 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Types;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class MethodCallDao extends AbstractEntityDao<MethodCall> {
 
     public MethodCallDao(DataSource dataSource) throws DaoException {

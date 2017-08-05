@@ -3,6 +3,11 @@ package com.jsonde.api.serialization;
 import java.io.IOException;
 import java.io.ObjectOutput;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public abstract class ObjectOutputDecorator implements ObjectOutput {
 
     private final ObjectOutput target;

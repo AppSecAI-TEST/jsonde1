@@ -9,6 +9,11 @@ import java.io.PrintStream;
 
 import javax.swing.JOptionPane;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class FileUtils {
 
     public static final String LINE_SEPARATOR = System.getProperty("line.separator");

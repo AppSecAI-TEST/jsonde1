@@ -3,6 +3,11 @@ package com.jsonde.api.serialization;
 import java.io.IOException;
 import java.io.ObjectInput;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public abstract class ObjectInputDecorator implements ObjectInput {
 
     private final ObjectInput target;

@@ -16,6 +16,11 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class LicenseManager {
 
     private byte SALT_SIZE = 8;

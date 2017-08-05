@@ -12,6 +12,11 @@ import java.lang.instrument.Instrumentation;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public abstract class Profiler {
 
 	/**

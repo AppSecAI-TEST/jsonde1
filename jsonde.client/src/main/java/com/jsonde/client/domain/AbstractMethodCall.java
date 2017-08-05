@@ -1,5 +1,10 @@
 package com.jsonde.client.domain;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public abstract class AbstractMethodCall extends DomainObject {
 
     protected Long callerId;

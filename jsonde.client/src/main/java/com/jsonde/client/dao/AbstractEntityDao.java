@@ -18,6 +18,11 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public abstract class AbstractEntityDao<T extends DomainObject> extends AbstractDao {
 
     private Class<? super DomainObject> domainObjectClass;

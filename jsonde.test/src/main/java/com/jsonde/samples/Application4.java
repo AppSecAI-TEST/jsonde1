@@ -2,6 +2,11 @@ package com.jsonde.samples;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class Application4 implements Runnable {
 
     public void run() {

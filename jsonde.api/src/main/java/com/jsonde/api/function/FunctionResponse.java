@@ -2,6 +2,11 @@ package com.jsonde.api.function;
 
 import com.jsonde.api.Message;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public abstract class FunctionResponse<T extends FunctionRequest> extends Message {
 
     private final long requestId;

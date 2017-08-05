@@ -3,6 +3,11 @@ package com.jsonde.api.methodCall;
 import com.jsonde.util.pool.ObjectPool;
 import com.jsonde.util.pool.ObjectPoolException;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class MethodCallDtoFactory extends ObjectPool<MethodCallDto> {
 
     private static final MethodCallDtoFactory instance = new MethodCallDtoFactory();

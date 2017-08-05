@@ -6,6 +6,11 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ObjectPool<T> {
 
     private final Class<T> elementsClass;

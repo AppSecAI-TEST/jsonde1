@@ -1,5 +1,10 @@
 package com.jsonde.client.sun;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class VirtualMachineData {
 
     private String id;

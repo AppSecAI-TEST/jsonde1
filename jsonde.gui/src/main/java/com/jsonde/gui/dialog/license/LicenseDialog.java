@@ -7,6 +7,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class LicenseDialog extends JSondeDialog {
 
     private boolean evaluate;

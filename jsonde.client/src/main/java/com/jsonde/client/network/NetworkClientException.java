@@ -1,5 +1,10 @@
 package com.jsonde.client.network;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class NetworkClientException extends Exception {
 
     public NetworkClientException() {

@@ -21,6 +21,11 @@ import java.util.List;
 import java.util.Vector;
 import java.util.concurrent.atomic.AtomicLong;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class Client implements MessageListener {
 
     private NetworkClient networkClient;

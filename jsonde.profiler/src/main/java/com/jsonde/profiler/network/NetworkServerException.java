@@ -1,5 +1,10 @@
 package com.jsonde.profiler.network;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class NetworkServerException extends Exception {
 
     public NetworkServerException() {

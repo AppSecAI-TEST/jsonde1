@@ -8,6 +8,11 @@ import java.io.*;
 import java.net.Socket;
 import java.net.SocketException;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ServerInputWorker implements Runnable, Closeable {
 
     private final static Log log = Log.getLog(ServerInputWorker.class);

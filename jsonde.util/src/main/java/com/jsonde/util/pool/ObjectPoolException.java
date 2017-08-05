@@ -1,5 +1,10 @@
 package com.jsonde.util.pool;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class ObjectPoolException extends Exception {
 
     public ObjectPoolException() {

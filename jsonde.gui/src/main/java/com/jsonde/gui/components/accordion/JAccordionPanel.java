@@ -6,6 +6,11 @@ import java.awt.event.ActionEvent;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class JAccordionPanel extends JPanel {
 
     private Set<JAccordionPane> accordionPanes = new LinkedHashSet<JAccordionPane>();
