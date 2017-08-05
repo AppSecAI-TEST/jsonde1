@@ -21,7 +21,7 @@ public class FileUtils {
     public static final String LINE_SEPARATOR = System.getProperty("line.separator");
     public static final String FILE_SEPARATOR = System.getProperty("file.separator");
     public static final String PATH_SEPARATOR = System.getProperty("path.separator");
-    public static final String USER_HOME = System.getProperty("user.home");
+    public static final String USER_HOME = System.getProperty(Configuration.);
 
     public static boolean deleteDirectory(File path) {
         if (path.exists()) {
