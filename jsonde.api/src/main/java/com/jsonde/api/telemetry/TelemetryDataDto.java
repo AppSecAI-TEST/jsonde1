@@ -6,6 +6,9 @@ public class TelemetryDataDto implements Serializable {
 
     private static final long serialVersionUID = -4872627251132927940L;
 
+    /**
+     * Variabile time
+     */
     public long time;
     public long freeMemory;
     public long maxMemory;

@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 public class MethodCallDto implements Serializable {
 
+	/**
+	 * Variabile RETURN_VALUE_FLAG
+	 */
     public static final byte RETURN_VALUE_FLAG = 0;
     public static final byte THROW_EXCEPTION_FLAG = 1;
     public static final byte CALLER_ID_SET_FLAG = 2;

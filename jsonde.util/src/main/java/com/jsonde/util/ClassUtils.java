@@ -10,6 +10,9 @@ import java.util.jar.JarFile;
 
 public class ClassUtils {
 
+	/**
+	 * Stringa CONSTRUCTOR_METHOD_NAME
+	 */
     public static final String CONSTRUCTOR_METHOD_NAME = "<init>";
     public static final String STATIC_CONSTRUCTOR_METHOD_NAME = "<clinit>";
     private static final String EMPTY_STRING = "";

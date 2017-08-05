@@ -14,6 +14,9 @@ import java.util.List;
 
 public abstract class Profiler {
 
+	/**
+	 * Stringa CLASS_CANONICAL_NAME
+	 */
     public static final String CLASS_CANONICAL_NAME = Profiler.class.getCanonicalName();
 
     private static final Log log = Log.getLog(Profiler.class);

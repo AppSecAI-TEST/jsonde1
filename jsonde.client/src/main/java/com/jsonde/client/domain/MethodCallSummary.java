@@ -2,6 +2,9 @@ package com.jsonde.client.domain;
 
 public class MethodCallSummary extends AbstractMethodCall {
 
+	/**
+	 * Variabile executionTime
+	 */
     public Long executionTime;
     public Long throwExceptionCounter;
     public Long invocationCount;
