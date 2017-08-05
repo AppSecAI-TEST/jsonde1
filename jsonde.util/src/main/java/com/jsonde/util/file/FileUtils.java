@@ -1,14 +1,20 @@
 package com.jsonde.util.file;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintStream;
+
+import javax.swing.JOptionPane;
 
 public class FileUtils {
 
     public static final String LINE_SEPARATOR = System.getProperty("line.separator");
     public static final String FILE_SEPARATOR = System.getProperty("file.separator");
     public static final String PATH_SEPARATOR = System.getProperty("path.separator");
-    public static final String USER_HOME = System.getProperty("user.home");
+    public static final String USER_HOME = System.getProperty(user());
 
     public static boolean deleteDirectory(File path) {
         if (path.exists()) {
@@ -46,5 +52,22 @@ public class FileUtils {
         File file = new File(path);
         return file.getCanonicalPath();
     }
+    
+    /**
+	 * Legge da file il nome utente di MySQL
+	 * @return
+	 */
+	public static String user() {
+		try {
+			@SuppressWarnings("resource")
+			BufferedReader buffer = new BufferedReader(new FileReader("user.txt"));
+			s = buffer.readLine();
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog (
+				null , "Problemi di lettura da file user"
+			);
+		}
+		return s;
+	}
 
 }

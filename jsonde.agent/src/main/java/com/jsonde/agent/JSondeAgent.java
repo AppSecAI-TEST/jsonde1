@@ -310,14 +310,13 @@ public class JSondeAgent implements MessageListener, ClassFileTransformer {
 
         profiler.addMessageListener(this);
         profiler.start();
-
-        while (null == agentConfigurationMessage) {
-            try {
+        try {
+        	while (null == agentConfigurationMessage) {
                 wait();
-            } catch (InterruptedException e) {
-                log.error(METHOD_NAME, e);
-                Thread.currentThread().interrupt();
             }
+        } catch (InterruptedException e) {
+                log.error(METHOD_NAME, e);
+                Thread.currentThread().interrupt();    
         }
 
         profiler.removeMessageListener(this);
