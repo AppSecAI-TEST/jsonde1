@@ -20,6 +20,10 @@ public class TelemetryDataDto implements Serializable {
      * freeMemory
      */
     public long freeMemory;
+
+    /**
+     * maxMemory
+     */
     public long maxMemory;
     public long totalMemory;
 

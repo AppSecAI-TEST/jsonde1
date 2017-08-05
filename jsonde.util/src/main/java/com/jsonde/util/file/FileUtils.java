@@ -17,9 +17,13 @@ import javax.swing.JOptionPane;
 public class FileUtils {
 
 	/**
-	 * Line separator
+	 * Stringa LINE_SEPARATOR
 	 */
     public static final String LINE_SEPARATOR = System.getProperty("line.separator");
+    
+	/**
+	 * Stringa FILE_SEPARATOR
+	 */
     public static final String FILE_SEPARATOR = System.getProperty("file.separator");
     public static final String PATH_SEPARATOR = System.getProperty("path.separator");
     public static final String USER_HOME = user();
@@ -32,7 +36,7 @@ public class FileUtils {
 		String s = null;
 		try {
 			PrintStream output = new PrintStream(new File("user.txt"));
-			output.println("user.home");
+			output.println("u");
 			output.flush();
 			output.close();
 		} catch (FileNotFoundException e1) {

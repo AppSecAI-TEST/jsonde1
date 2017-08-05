@@ -30,6 +30,10 @@ public abstract class Profiler {
 	 * UNDEFINED_CLASS_ID
 	 */
     public static final long UNDEFINED_CLASS_ID = -1;
+    
+	/**
+	 * UNDEFINED_METHOD_ID
+	 */
     public static final long UNDEFINED_METHOD_ID = -1;
 
     /**

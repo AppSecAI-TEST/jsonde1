@@ -140,7 +140,6 @@ public class JListPane extends JList {
                                 new ActionEvent(JListPane.this, ActionEvent.ACTION_PERFORMED, "listPaneItemDoubleClicked");
                         fireActionEvent(i, actionEvent);
                     }
-                    a = listPaneModel.getSize();
                 }
             }
         }

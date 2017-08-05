@@ -19,6 +19,9 @@ public class MethodCallSummaryDto implements Serializable {
      */
     public MethodCallSummaryDto caller;
 
+    /**
+     * methodId
+     */
     public long methodId;
     public long executionTime;
     public transient long startTime;

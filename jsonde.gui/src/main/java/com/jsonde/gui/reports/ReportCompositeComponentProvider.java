@@ -147,7 +147,6 @@ public class ReportCompositeComponentProvider implements CompositeComponentProvi
 
                     double value = resultSet.getDouble(i + 2);
                     timeSeries.add(timePeriod, value);
-                    a = timeSeriesList.size();
                     
                 }
 

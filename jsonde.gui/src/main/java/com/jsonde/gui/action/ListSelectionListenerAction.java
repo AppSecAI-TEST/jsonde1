@@ -57,8 +57,6 @@ public abstract class ListSelectionListenerAction
                 result = i;
                 break;
             }
-            a = e.getFirstIndex();
-            b = e.getLastIndex();
         }
         return result;
     }
