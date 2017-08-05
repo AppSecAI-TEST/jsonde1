@@ -13,6 +13,9 @@ import java.util.List;
  */
 public class DaoFactory {
 
+	/**
+	 * DaoFactory instance
+	 */
     private static DaoFactory instance;
 
     private final List<AbstractEntityDao> daoList = new LinkedList<AbstractEntityDao>();

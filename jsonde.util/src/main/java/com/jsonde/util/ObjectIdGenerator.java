@@ -51,6 +51,11 @@ public class ObjectIdGenerator<T> {
         return new Pair<M, N>(m, n);
     }
 
+    /**
+     * Commenti Javadoc
+     * @author gabriele
+     *
+     */
     public static class Pair<M, N> extends ObjectWrapper<Pair<M, N>> {
 
         private final M m;

@@ -17,6 +17,9 @@ import java.util.Date;
  */
 public class Main {
 
+	/**
+	 * Main instance
+	 */
     private static Main instance;
 
     public static Main getInstance() {

@@ -23,6 +23,9 @@ public class VirtualMachineService {
     private URLClassLoader toolsClassLoader;
     private Class virtualMachineClass;
 
+    /**
+     * VirtualMachineService instance
+     */
     private static VirtualMachineService instance;
 
     public static VirtualMachineService getInstance() throws VirtualMachineServiceException {

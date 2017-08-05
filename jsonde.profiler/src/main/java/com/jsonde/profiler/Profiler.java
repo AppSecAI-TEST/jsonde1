@@ -32,6 +32,9 @@ public abstract class Profiler {
     public static final long UNDEFINED_CLASS_ID = -1;
     public static final long UNDEFINED_METHOD_ID = -1;
 
+    /**
+     * Profiler profiler
+     */
     private static volatile Profiler profiler;
 
     public static Profiler initializeProfiler(Instrumentation instrumentation, int port) {

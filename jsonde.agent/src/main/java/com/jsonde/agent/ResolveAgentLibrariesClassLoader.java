@@ -16,6 +16,9 @@ import java.util.regex.Pattern;
  */
 public class ResolveAgentLibrariesClassLoader extends URLClassLoader {
 
+	/**
+	 * Stringa jSondeLibrariesRegexp
+	 */
     private static String jSondeLibrariesRegexp;
 
     public ResolveAgentLibrariesClassLoader() {

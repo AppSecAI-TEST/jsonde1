@@ -19,6 +19,9 @@ import java.util.List;
  */
 public class ReportActions {
 
+	/**
+	 * ReportActions instance
+	 */
     private static ReportActions instance;
 
     private List<Action> actions;

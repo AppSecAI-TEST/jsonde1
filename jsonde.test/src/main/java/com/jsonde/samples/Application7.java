@@ -13,6 +13,9 @@ import java.util.List;
  */
 public class Application7 {
 
+	/**
+	 * Throwable exception
+	 */
     private static volatile Throwable exception;
 
     public static void main(String... arguments) throws Throwable {

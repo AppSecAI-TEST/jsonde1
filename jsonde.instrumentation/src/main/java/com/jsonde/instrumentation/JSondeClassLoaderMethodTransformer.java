@@ -4,6 +4,11 @@ import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
 public class JSondeClassLoaderMethodTransformer extends MethodVisitor implements Opcodes {
 
     public JSondeClassLoaderMethodTransformer(MethodVisitor methodVisitor) {
