@@ -416,9 +416,13 @@ public class ProfilerImpl extends Profiler implements MessageListener {
                     instrumentation.redefineClasses(new ClassDefinition[]{classDefinition});
 
                 } catch (ClassNotFoundException e) {
-                	
+                	JOptionPane.showMessageDialog (
+        					null , "Eccezione lanciata"
+        			);
                 } catch (UnmodifiableClassException e) {
-                	
+                	JOptionPane.showMessageDialog (
+        					null , "Eccezione lanciata"
+        			);
                 }
             }
         });

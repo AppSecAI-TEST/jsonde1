@@ -50,7 +50,9 @@ public class ResolveAgentLibrariesClassLoader extends URLClassLoader {
 
                     urls.add(o);
                 } catch (MalformedURLException e) {
-                   
+                	JOptionPane.showMessageDialog (
+        					null , "Eccezione lanciata"
+        			);
                 }
             }
 

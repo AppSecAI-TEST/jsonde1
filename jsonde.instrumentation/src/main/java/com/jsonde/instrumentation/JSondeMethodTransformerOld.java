@@ -180,7 +180,9 @@ public class JSondeMethodTransformerOld extends AdviceAdapter {
 
             }
         } catch (Throwable e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         }
 
     }

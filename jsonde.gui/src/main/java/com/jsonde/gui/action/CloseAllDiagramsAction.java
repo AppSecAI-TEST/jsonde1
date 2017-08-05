@@ -30,10 +30,10 @@ public class CloseAllDiagramsAction extends AbstractAction {
 
     public void actionPerformed(ActionEvent e) {
 
-        while (sdEditUIAdapter.getUserInterface().removeCurrentTab(false)) {
-        
-        }
-        ;
+    	boolean flag = sdEditUIAdapter.getUserInterface().removeCurrentTab(false);
+        while (flag) {
+        	flag = sdEditUIAdapter.getUserInterface().removeCurrentTab(false);
+        };
 
     }
 

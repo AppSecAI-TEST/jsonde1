@@ -42,7 +42,10 @@ public class ServerOutputWorker implements Runnable, Closeable {
 
             log.info("[ServerOutputWorker] ready");
 
-            while (server.isRunning() || server.isMessageInQueue()) {
+            boolean flag = server.isRunning();
+            boolean falg1 = server.isMessageInQueue();
+            
+            while (flag || flag1) {
 
                 log.info("[ServerOutputWorker] running");
 
@@ -61,7 +64,9 @@ public class ServerOutputWorker implements Runnable, Closeable {
                 }
 
                 log.info("[ServerOutputWorker] running");
-
+                flag = server.isRunning();
+                falg1 = server.isMessageInQueue();
+                
             }
 
             log.info("[ServerOutputWorker] stopped");

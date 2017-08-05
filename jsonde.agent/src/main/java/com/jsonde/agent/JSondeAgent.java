@@ -138,11 +138,17 @@ public class JSondeAgent implements MessageListener, ClassFileTransformer {
                             loadClass("com.jsonde.instrumentation.ByteCodeTransformer").
                             newInstance();
         } catch (InstantiationException e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         } catch (IllegalAccessException e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         } catch (ClassNotFoundException e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         }
         return null;
     }
@@ -208,8 +214,10 @@ public class JSondeAgent implements MessageListener, ClassFileTransformer {
 
                 byteCodeInputStream = classFileResourceURL.openStream();
 
+                int a = byteCodeInputStream.available();
                 while (byteCodeInputStream.available() > 0) {
                     originalByteArrayOutputStream.write(byteCodeInputStream.read());
+                    a = byteCodeInputStream.available();
                 }
 
                 byte[] bytecode = originalByteArrayOutputStream.toByteArray();
@@ -226,8 +234,13 @@ public class JSondeAgent implements MessageListener, ClassFileTransformer {
                 }
 
             } catch (IOException e) {
+            	JOptionPane.showMessageDialog (
+    					null , "Eccezione lanciata"
+    			);
             } catch (IllegalClassFormatException e) {
-            
+            	JOptionPane.showMessageDialog (
+    					null , "Eccezione lanciata"
+    			);
             } finally {
                 IO.close(originalByteArrayOutputStream);
                 IO.close(byteCodeInputStream);

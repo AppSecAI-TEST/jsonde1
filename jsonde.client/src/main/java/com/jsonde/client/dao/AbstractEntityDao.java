@@ -152,7 +152,9 @@ public abstract class AbstractEntityDao<T extends DomainObject> extends Abstract
             try {
                 connection.setAutoCommit(autoCommit);
             } catch (SQLException e) {
-            	
+            	JOptionPane.showMessageDialog (
+    					null , "Eccezione lanciata"
+    			);
             }
             DbUtils.close(connection);
         }

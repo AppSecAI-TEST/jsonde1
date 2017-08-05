@@ -21,6 +21,8 @@ import java.util.List;
 import java.util.Vector;
 import java.util.concurrent.atomic.AtomicLong;
 
+import javax.swing.JOptionPane;
+
 /**
  * Commenti Javadoc
  * @author gabriele
@@ -67,7 +69,9 @@ public class Client implements MessageListener {
                 );
             }
         } catch (DaoException e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         }
 
     }
@@ -98,9 +102,13 @@ public class Client implements MessageListener {
             }
 
         } catch (InterruptedException e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         } catch (DaoException e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         }
 
     }
@@ -130,7 +138,9 @@ public class Client implements MessageListener {
             DaoFactory.createSchema();
 
         } catch (DaoException e) {
-           
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         }
         networkClient = new NetworkClientImpl(address, port);
     }
@@ -152,7 +162,9 @@ public class Client implements MessageListener {
             );
 
         } catch (DaoException e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         }
     }
 
@@ -167,7 +179,9 @@ public class Client implements MessageListener {
         try {
             networkClient.start();
         } catch (NetworkClientException e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         }
 
     }
@@ -177,7 +191,9 @@ public class Client implements MessageListener {
         try {
             networkClient.stop();
         } catch (NetworkClientException e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         }
 
         networkClient.removeMessageListener(this);
@@ -216,7 +232,9 @@ public class Client implements MessageListener {
             try {
                 DaoFactory.getClazzDao().insert(clazz);
             } catch (DaoException e) {
-            
+            	JOptionPane.showMessageDialog (
+    					null , "Eccezione lanciata"
+    			);
             }
 
             fireRegisterClassEvent(clazz);
@@ -234,7 +252,9 @@ public class Client implements MessageListener {
             try {
                 DaoFactory.getMethodDao().insert(method);
             } catch (DaoException e) {
-            
+            	JOptionPane.showMessageDialog (
+    					null , "Eccezione lanciata"
+    			);
             }
 
         } else if (message instanceof MethodCallMessage) {
@@ -253,7 +273,9 @@ public class Client implements MessageListener {
                 methodCall = DaoFactory.getMethodCallDao().
                         persistMethodCallDtos(methodCallDtos);
             } catch (DaoException e) {
-            
+            	JOptionPane.showMessageDialog (
+    					null , "Eccezione lanciata"
+    			);
             }
 
             MethodCallSummaryDto methodCallSummaryDto = methodCallMessage.getMethodCallSummaryDto();
@@ -261,7 +283,9 @@ public class Client implements MessageListener {
             try {
                 DaoFactory.getMethodCallSummaryDao().processMethodCallSummaryDto(methodCallSummaryDto);
             } catch (DaoException e) {
-            
+            	JOptionPane.showMessageDialog (
+    					null , "Eccezione lanciata"
+    			);
             }
 
             if (complete) {
@@ -302,7 +326,9 @@ public class Client implements MessageListener {
             try {
                 DaoFactory.getTelemetryDataDao().insert(telemetryData);
             } catch (DaoException e) {
-            
+            	JOptionPane.showMessageDialog (
+    					null , "Eccezione lanciata"
+    			);
             }
 
             
@@ -375,7 +401,9 @@ public class Client implements MessageListener {
                 clazzDao.update(clazz);
 
             } catch (DaoException e) {
-            
+            	JOptionPane.showMessageDialog (
+    					null , "Eccezione lanciata"
+    			);
             }
 
         }

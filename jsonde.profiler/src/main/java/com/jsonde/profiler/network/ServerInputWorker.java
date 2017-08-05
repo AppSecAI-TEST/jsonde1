@@ -27,7 +27,9 @@ public class ServerInputWorker implements Runnable, Closeable {
         try {
             this.inputStream = socket.getInputStream();
         } catch (IOException e) {
-           
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         }
     }
 
@@ -44,8 +46,10 @@ public class ServerInputWorker implements Runnable, Closeable {
             server.setInputWorkerReady(true);
 
             log.info("[ServerInputWorker] ready");
-
-            while (server.isRunning()) {
+ 
+            boolean flag = server.isRunning();
+            
+            while (flag) {
 
                 log.info("[ServerInputWorker] running");
 
@@ -60,7 +64,8 @@ public class ServerInputWorker implements Runnable, Closeable {
                 server.processMessage(message);
 
                 log.info("[ServerInputWorker] running");
-
+                
+                flag = server.isRunning();
             }
 
             log.info("[ServerInputWorker] stopped");

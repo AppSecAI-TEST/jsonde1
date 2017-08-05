@@ -127,13 +127,15 @@ public class NetworkClientImpl implements NetworkClient {
 
         final String METHOD_NAME = "waitForInitialization()";
 
-        while (!areWorkersReady()) {
+        boolean flag = areWorkersReady();
+        while (!flag) {
             try {
                 wait();
             } catch (InterruptedException e) {
                 log.error(METHOD_NAME, e);
                 Thread.currentThread().interrupt();
             }
+            flag = areWorkersReady();
         }
         notifyAll();
     }
@@ -190,8 +192,11 @@ public class NetworkClientImpl implements NetworkClient {
 
 
     protected synchronized boolean isMessageInQueue() throws InterruptedException {
-        while (isRunning() && 0 == messageQueue.size()) {
+    	boolean flag = isRunning();
+    	
+        while (flag && 0 == messageQueue.size()) {
             wait();
+            flag = isRunning();
         }
         return 0 != messageQueue.size();
     }

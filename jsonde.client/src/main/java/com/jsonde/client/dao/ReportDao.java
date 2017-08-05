@@ -68,9 +68,13 @@ public class ReportDao extends AbstractDao {
             }
 
         } catch (DaoException e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         } catch (SQLException e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         } finally {
             DbUtils.close(resultSet);
             DbUtils.close(statement);
@@ -115,9 +119,13 @@ public class ReportDao extends AbstractDao {
             }
 
         } catch (DaoException e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         } catch (SQLException e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         } finally {
             DbUtils.close(resultSet);
             DbUtils.close(statement);
@@ -165,9 +173,13 @@ public class ReportDao extends AbstractDao {
             }
 
         } catch (DaoException e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         } catch (SQLException e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         } finally {
             DbUtils.close(resultSet);
             DbUtils.close(statement);

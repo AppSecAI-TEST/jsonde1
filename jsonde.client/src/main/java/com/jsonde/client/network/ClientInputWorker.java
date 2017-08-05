@@ -44,7 +44,8 @@ public class ClientInputWorker implements Runnable {
 
             log.info("[ClientInputWorker] ready");
 
-            while (client.isRunning()) {
+            boolean flag = client.isRunning();
+            while (flag) {
 
                 log.info("[ClientInputWorker] running");
 
@@ -59,7 +60,7 @@ public class ClientInputWorker implements Runnable {
                 client.processMessage(message);
 
                 log.info("[ClientInputWorker] running");
-
+                flag = client.isRunning();
             }
 
             log.info("[ClientInputWorker] stopped");

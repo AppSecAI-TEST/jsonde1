@@ -193,7 +193,9 @@ public class JSondeMethodTransformer extends AdviceAdapter {
 
             }
         } catch (Throwable e) {
-           
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         }
 
     }

@@ -30,7 +30,9 @@ public class Issue9 {
         try {
             Issue9 issue9 = new Issue9();
         } catch (Exception e) {
-            // do nothing
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         }
 
         Thread thread = new Thread(

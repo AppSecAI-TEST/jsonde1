@@ -140,13 +140,15 @@ public class ReportCompositeComponentProvider implements CompositeComponentProvi
 
                 RegularTimePeriod timePeriod = new Millisecond(new java.util.Date(time));
 
-                for (int i = 0; i < timeSeriesList.size(); i++) {
+                int a = timeSeriesList.size();
+                for (int i = 0; i < a; i++) {
 
                     TimeSeries timeSeries = timeSeriesList.get(i);
 
                     double value = resultSet.getDouble(i + 2);
                     timeSeries.add(timePeriod, value);
-
+                    a = timeSeriesList.size();
+                    
                 }
 
             }

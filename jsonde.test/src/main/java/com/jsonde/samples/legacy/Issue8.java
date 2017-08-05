@@ -44,7 +44,9 @@ public class Issue8 {
             manager.sendMessage("hello, world");
             manager.close();
         } catch (Exception e) {
-           
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         }
     }
 

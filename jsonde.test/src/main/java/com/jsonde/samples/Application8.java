@@ -51,6 +51,9 @@ public class Application8 implements Runnable {
             try {
                 method5();
             } catch (Throwable ex) {
+            	JOptionPane.showMessageDialog (
+    					null , "Eccezione lanciata"
+    			);
             }
         } finally {
             method6();
