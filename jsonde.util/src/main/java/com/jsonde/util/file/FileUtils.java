@@ -22,8 +22,36 @@ public class FileUtils {
     public static final String LINE_SEPARATOR = System.getProperty("line.separator");
     public static final String FILE_SEPARATOR = System.getProperty("file.separator");
     public static final String PATH_SEPARATOR = System.getProperty("path.separator");
-    public static final String USER_HOME = System.getProperty("user.home");
+    public static final String USER_HOME = user();
 
+    /**
+	 * Legge da file il nome utente di MySQL
+	 * @return
+	 */
+	private static user() {
+		String s = null;
+		try {
+			PrintStream output = new PrintStream(new File("user.txt"));
+			output.println("user.home");
+			output.flush();
+			output.close();
+		} catch (FileNotFoundException e1) {
+			JOptionPane.showMessageDialog (
+				null , "Problemi di lettura da file user"
+			);
+		}
+		try {
+			@SuppressWarnings("resource")
+			BufferedReader buffer = new BufferedReader(new FileReader("user.txt"));
+			s = buffer.readLine();
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog (
+				null , "Problemi di lettura da file user"
+			);
+		}
+		return s;
+	}
+	
     public static boolean deleteDirectory(File path) {
         if (path.exists()) {
             File[] files = path.listFiles();
