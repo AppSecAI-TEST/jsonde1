@@ -18,13 +18,10 @@ import org.jfree.data.time.Millisecond;
 import org.jfree.data.time.RegularTimePeriod;
 import org.jfree.data.time.TimeSeries;
 import org.jfree.data.time.TimeSeriesCollection;
-
 import javax.swing.*;
 import java.awt.*;
 import java.sql.*;
 import java.util.*;
-import java.util.Date;
-import java.util.List;
 
 public class ReportCompositeComponentProvider implements CompositeComponentProvider {
 

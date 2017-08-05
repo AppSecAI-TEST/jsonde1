@@ -102,7 +102,7 @@ public class VirtualMachineService {
             virtualMachineClass = toolsClassLoader.loadClass("com.sun.tools.attach.VirtualMachine");
 
             for (Method method : virtualMachineClass.getMethods()) {
-                //System.out.println(method);
+            	System.out.println(method);
             }
 
 
@@ -292,7 +292,7 @@ public class VirtualMachineService {
         VirtualMachineService virtualMachineService = new VirtualMachineService();
 
         for (VirtualMachineData vmData : virtualMachineService.getVirtualMachines()) {
-            //System.out.println(vmData);
+            System.out.println(vmData);
         }
 
     }
