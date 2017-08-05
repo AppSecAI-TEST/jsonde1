@@ -953,7 +953,7 @@ public class Base64 implements BinaryEncoder, BinaryDecoder {
      */
     public static byte[] encodeInteger(BigInteger bigInt) {
         if (bigInt == null) {
-            throw new NullPointerException("encodeInteger called with null parameter");
+            throw new Exception("encodeInteger called with null parameter");
         }
         return encodeBase64(toIntegerBytes(bigInt), false);
     }
