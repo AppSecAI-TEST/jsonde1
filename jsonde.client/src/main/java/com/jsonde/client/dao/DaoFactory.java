@@ -32,8 +32,8 @@ public class DaoFactory {
     private final ReportDao reportDao;
     private final TelemetryDataDao telemetryDataDao;
 
-    public static void initialize(DataSource dataSource) throws DaoException {
-        instance = new DaoFactory(dataSource);
+    public static void initialize(DataSource dtSource) throws DaoException {
+        instance = new DaoFactory(dtSource);
     }
 
     private DaoFactory(DataSource dataSource) throws DaoException {

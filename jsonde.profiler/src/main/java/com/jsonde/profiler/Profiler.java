@@ -46,8 +46,8 @@ public abstract class Profiler {
         return profiler;
     }
 
-    public static void initializeProfiler(Profiler profiler) {
-        Profiler.profiler = profiler;
+    public static void initializeProfiler(Profiler pr) {
+        Profiler.profiler = pr;
     }
 
     public static Profiler getProfiler() {

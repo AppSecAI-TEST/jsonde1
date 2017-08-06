@@ -92,7 +92,7 @@ public class LicenseManager {
         return Arrays.equals(license, licenseData);
     }
 
-    public void saveLicense(String license) {
+    public void saveLicense(String lic) {
 
         String licenseFileName =
                 FileUtils.USER_HOME +
@@ -111,7 +111,7 @@ public class LicenseManager {
 
         try {
             fileWriter = new FileWriter(licenseFile);
-            fileWriter.write(license);
+            fileWriter.write(lic);
         } catch (IOException e) {
             Main.getInstance().processException(e);
         } finally {

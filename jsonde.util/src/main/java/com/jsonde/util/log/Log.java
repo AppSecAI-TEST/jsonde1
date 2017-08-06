@@ -21,8 +21,8 @@ public class Log {
         logger.setLevel(Level.SEVERE);
     }
 
-    public static Log getLog(Class clazz) {
-        return new Log(clazz);
+    public static Log getLog(Class cl) {
+        return new Log(cl);
     }
 
     public void entering(String methodName, Object... arguments) {

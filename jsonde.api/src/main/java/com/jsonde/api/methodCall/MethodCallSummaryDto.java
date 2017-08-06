@@ -33,11 +33,11 @@ public class MethodCallSummaryDto implements Serializable {
         callees.put(callee.methodId, callee);
     }
 
-    public MethodCallSummaryDto getCallee(long methodId) {
+    public MethodCallSummaryDto getCallee(long methId) {
 
-        if (!callees.containsKey(methodId)) {
+        if (!callees.containsKey(methId)) {
             MethodCallSummaryDto callee = new MethodCallSummaryDto();
-            callee.methodId = methodId;
+            callee.methodId = methid;
             addCallee(callee);
         }
 

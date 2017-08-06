@@ -39,15 +39,15 @@ public class JSondeAgent implements MessageListener, ClassFileTransformer {
 
     private final ClassLoader resolveAgentLibrariesClassLoader;
 
-    public static void premain(final String arg, Instrumentation instrumentation) {
-        JSondeAgent jSondeAgent = new JSondeAgent(arg, instrumentation);
+    public static void premain(final String arg, Instrumentation instr) {
+        JSondeAgent jSondeAgent = new JSondeAgent(arg, instr);
         jSondeAgent.execute();
         jSondeAgent.setTransformer();
     }
 
     @SuppressWarnings("unused")
-    public static void agentmain(String arg, final Instrumentation instrumentation) {
-        final JSondeAgent jSondeAgent = new JSondeAgent(arg, instrumentation);
+    public static void agentmain(String arg, final Instrumentation instr) {
+        final JSondeAgent jSondeAgent = new JSondeAgent(arg, instr);
         new Thread(new Runnable() {
 
             public void run() {

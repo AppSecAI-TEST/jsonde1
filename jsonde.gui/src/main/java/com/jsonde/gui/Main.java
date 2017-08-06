@@ -117,11 +117,11 @@ public class Main {
 
     }
 
-    public static void main(String... arguments) {
+    public static void main(String... argms) {
 
         Main main = Main.getInstance();
 
-        main.arguments = arguments;
+        main.arguments = argms;
 
         //main.checkLicense();
 
