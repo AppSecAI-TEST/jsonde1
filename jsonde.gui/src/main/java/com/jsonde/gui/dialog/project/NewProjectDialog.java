@@ -78,7 +78,7 @@ public class NewProjectDialog extends JSondeDialog {
             return ok;
         }
 
-        private ButtonsPanel() {
+        public ButtonsPanel() {
             this("Ok");
         }
 

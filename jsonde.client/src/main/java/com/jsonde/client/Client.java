@@ -452,7 +452,7 @@ public class Client implements MessageListener {
 
         } catch (DaoException e) {
         	JOptionPane.showMessageDialog (
-					null , "Eccezione lanciata"
+					null , "Eccezione DAO lanciata"
 			);
         }
 

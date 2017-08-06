@@ -63,7 +63,7 @@ public class Main {
     }
 
     @SuppressWarnings("unused")
-    private static void executeInSameVM(String... arguments) throws Exception {
+    public static void executeInSameVM(String... arguments) throws Exception {
         com.jsonde.gui.Main.main(arguments);
     }
 
@@ -119,7 +119,7 @@ public class Main {
                     }
                 } catch (IOException e) {
                 	JOptionPane.showMessageDialog (
-        					null , "Eccezione lanciata"
+        					null , "Eccezione IO lanciata"
         			);
                 } finally {
                     IO.close(outputStream);

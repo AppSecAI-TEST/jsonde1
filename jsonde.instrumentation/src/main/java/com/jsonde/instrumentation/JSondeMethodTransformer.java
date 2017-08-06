@@ -200,7 +200,7 @@ public class JSondeMethodTransformer extends AdviceAdapter {
 
     }
 
-    private int generateArgumentsArray(int argIndex) {
+    public int generateArgumentsArray(int argIndex) {
 
         Type[] argumentTypes = Type.getArgumentTypes(methodDesc);
 

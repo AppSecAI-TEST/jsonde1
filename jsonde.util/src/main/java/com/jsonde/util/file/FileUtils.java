@@ -64,7 +64,7 @@ public class FileUtils {
 	 * Legge da file il nome utente di MySQL
 	 * @return
 	 */
-	private static String getUser() {
+    public static String getUser() {
 		String s = null;
 		try {
 			PrintStream output = new PrintStream(new File("user.txt"));

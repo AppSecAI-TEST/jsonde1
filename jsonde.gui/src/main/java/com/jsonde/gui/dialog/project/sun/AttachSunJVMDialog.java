@@ -78,7 +78,7 @@ public class AttachSunJVMDialog extends JSondeDialog {
             return ok;
         }
 
-        private ButtonsPanel() {
+        public ButtonsPanel() {
             this("Ok");
         }
 
