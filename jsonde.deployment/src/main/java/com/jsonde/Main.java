@@ -118,7 +118,9 @@ public class Main {
                         outputStream.write((byte)i);
                     }
                 } catch (IOException e) {
-                    
+                	JOptionPane.showMessageDialog (
+        					null , "Eccezione lanciata"
+        			);
                 } finally {
                     IO.close(outputStream);
                 }

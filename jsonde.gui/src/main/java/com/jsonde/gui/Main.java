@@ -36,7 +36,9 @@ public class Main {
         try {
             sdEditUIAdapter.processException(e);
         } catch (Exception ex) {
-           
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         }JOptionPane.showMessageDialog (
 				null , "Eccezione lanciata"
 		);

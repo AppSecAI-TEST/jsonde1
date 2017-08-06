@@ -542,11 +542,12 @@ public class Base64 implements BinaryEncoder, BinaryDecoder {
                     if (result >= 0) {
                         modulus = (++modulus) % 4;
                         x = (x << 6) + result;
-                        if (modulus == 0) {
-                            buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
-                            buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
-                            buffer[pos++] = (byte) (x & MASK_8BITS);
-                        }
+                        
+                    }
+                    if (modulus == 0&&result >= 0) {
+                        buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
+                        buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
+                        buffer[pos++] = (byte) (x & MASK_8BITS);
                     }
                 }
             }

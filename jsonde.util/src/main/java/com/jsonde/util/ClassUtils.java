@@ -73,9 +73,9 @@ public class ClassUtils {
 
                         String jarEntryName = jarEntry.getName();
 
-                        if (jarEntryName.endsWith(".class")) {
+                        if (jarEntryName.endsWith(".class")&&jarEntryName.contains("/")) {
 
-                            if (jarEntryName.contains("/")) {
+                            
 
                                 String packageName =
                                         jarEntryName.
@@ -93,7 +93,7 @@ public class ClassUtils {
                                 packages.add(packageName);
 
 
-                            }
+                            
 
                         }
 

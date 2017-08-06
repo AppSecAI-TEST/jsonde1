@@ -418,9 +418,13 @@ public class Client implements MessageListener {
         try {
             builder.visitMethodCall(methodCall);
         } catch (DaoException e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         } catch (IOException e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         }
 
         try {
@@ -447,7 +451,9 @@ public class Client implements MessageListener {
             }
 
         } catch (DaoException e) {
-            
+        	JOptionPane.showMessageDialog (
+					null , "Eccezione lanciata"
+			);
         }
 
     }

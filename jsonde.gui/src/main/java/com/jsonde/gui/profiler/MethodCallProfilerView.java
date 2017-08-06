@@ -95,17 +95,14 @@ public class MethodCallProfilerView extends JPanel {
 
                             time /= 60L;
 
-                            if (time > 0) {
+                            
                                 timeStringBuilder.insert(0, time % 60L + " m ");
 
                                 time /= 60L;
 
-                                if (time > 0) {
+                            
                                     timeStringBuilder.insert(0, time + " h ");
-                                }
-
-                            }
-
+                                
                         }
 
                         MethodCallProfilerNode childNode = new MethodCallProfilerNode(
@@ -178,6 +175,7 @@ public class MethodCallProfilerView extends JPanel {
                     return "Invocation Count";
                 case 2:
                     return "Invocation Time";
+               default: return null;
             }
             return null;
         }
@@ -191,6 +189,7 @@ public class MethodCallProfilerView extends JPanel {
                     return Long.class;
                 case 2:
                     return String.class;
+                default: return null;
             }
             return null;
         }
@@ -207,6 +206,7 @@ public class MethodCallProfilerView extends JPanel {
                     return node.invocationCount;
                 case 2:
                     return node.totalTime;
+                default: return null;
             }
             return null;
         }
