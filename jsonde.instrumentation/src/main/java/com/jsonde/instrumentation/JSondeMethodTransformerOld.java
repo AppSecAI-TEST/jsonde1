@@ -268,6 +268,7 @@ public class JSondeMethodTransformerOld extends AdviceAdapter {
                             "(D)Ljava/lang/Double;"
                     );
                     break;
+                default: break;
             }
 
             // boxing end

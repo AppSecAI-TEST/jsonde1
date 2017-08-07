@@ -22,7 +22,7 @@ public class ReportActions {
 	/**
 	 * ReportActions instance
 	 */
-    private static ReportActions instance;
+    private static ReportActions instance = null;
 
     private List<Action> actions;
 

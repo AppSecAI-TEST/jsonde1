@@ -67,6 +67,7 @@ public class FiltersTableModel extends AbstractTableModel {
                 return classFilter.isInclusive();
             case 1:
                 return classFilter.getPackageName();
+            default: break;
         }
 
         return null;
@@ -84,6 +85,7 @@ public class FiltersTableModel extends AbstractTableModel {
             case 1:
                 classFilter.setPackageName((String) aValue);
                 break;
+            default: break;
         }
 
     }

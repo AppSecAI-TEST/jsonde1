@@ -20,7 +20,7 @@ public class Main {
 	/**
 	 * Main instance
 	 */
-    private static Main instance;
+    private static Main instance = null;
 
     public static Main getInstance() {
         if (null == instance) {

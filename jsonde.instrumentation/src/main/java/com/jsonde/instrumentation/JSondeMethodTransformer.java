@@ -289,6 +289,7 @@ public class JSondeMethodTransformer extends AdviceAdapter {
                             false
                     );
                     break;
+                default: break;
             }
 
             // boxing end

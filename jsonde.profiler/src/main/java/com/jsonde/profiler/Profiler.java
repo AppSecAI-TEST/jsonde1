@@ -39,7 +39,7 @@ public abstract class Profiler {
     /**
      * Profiler profiler
      */
-    private static volatile Profiler profiler;
+    private static volatile Profiler profiler = null;
 
     public static Profiler initializeProfiler(Instrumentation instrumentation, int port) {
         profiler = new ProfilerImpl(instrumentation, port);
@@ -57,6 +57,9 @@ public abstract class Profiler {
         return profiler;
     }
 
+    /**
+     * Stringa ENTER_METHOD_METHOD_NAME
+     */
     public static final String ENTER_METHOD_METHOD_NAME =
             "enterMethod";
     public static final String ENTER_METHOD_METHOD_DESCRIPTOR =

@@ -288,10 +288,8 @@ public class Client implements MessageListener {
     			);
             }
 
-            if (complete) {
-                createTopMethodCall(methodCall);
-            }
-
+        } else if (message instanceof MethodCallMessage && complete){
+            createTopMethodCall(methodCall);
         } else if (message instanceof TelemetryDataMessage) {
 
             TelemetryDataMessage telemetryDataMessage =

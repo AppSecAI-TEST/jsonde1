@@ -468,6 +468,8 @@ public class Base64 implements BinaryEncoder, BinaryDecoder {
                         buffer[pos++] = PAD;
                     }
                     break;
+                    
+                default: break;
             }
             if (lineLength > 0 && pos > 0) {
                 System.arraycopy(lineSeparator, 0, buffer, pos, lineSeparator.length);
@@ -567,6 +569,7 @@ public class Base64 implements BinaryEncoder, BinaryDecoder {
                     buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
                     buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
                     break;
+                default: break;
             }
         }
     }
@@ -820,6 +823,7 @@ public class Base64 implements BinaryEncoder, BinaryDecoder {
                     break;
                 default:
                     groomedData[bytesCopied++] = data[i];
+                    break;
             }
         }
         byte packedData[] = new byte[bytesCopied];

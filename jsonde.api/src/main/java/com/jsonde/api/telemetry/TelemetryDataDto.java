@@ -25,6 +25,10 @@ public class TelemetryDataDto implements Serializable {
      * maxMemory
      */
     public long maxMemory;
+    
+    /**
+    * totalMemory
+    */
     public long totalMemory;
 
     public int loadedClassCount;

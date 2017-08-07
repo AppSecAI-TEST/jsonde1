@@ -16,7 +16,7 @@ public class DaoFactory {
 	/**
 	 * DaoFactory instance
 	 */
-    private static DaoFactory instance;
+    private static DaoFactory instance = null;
 
     private final List<AbstractEntityDao> daoList = new LinkedList<AbstractEntityDao>();
 

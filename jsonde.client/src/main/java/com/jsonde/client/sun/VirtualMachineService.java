@@ -23,7 +23,7 @@ public class VirtualMachineService {
     /**
      * VirtualMachineService instance
      */
-    private static VirtualMachineService instance;
+    private static VirtualMachineService instance = null;
 
     public static VirtualMachineService getInstance() throws VirtualMachineServiceException {
         if (null == instance) {

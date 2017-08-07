@@ -58,6 +58,7 @@ public class ReportCompositeComponentProvider implements CompositeComponentProvi
                 return createTimeChart();
             case CUSTOM:
                 return createCustomChart();
+            default: break;
         }
 
         return new JLabel("Unknown chart type");

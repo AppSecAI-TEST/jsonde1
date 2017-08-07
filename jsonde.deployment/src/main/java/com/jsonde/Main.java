@@ -103,9 +103,15 @@ public class Main {
         File jSondeOutFile = new File(JSONDE_OUT);
         FileUtils.createFile(jSondeOutFile);
         OutputStream outputStream = new FileOutputStream(jSondeOutFile);
-
-        redirectProcessStreams(process, outputStream);
-
+        try {
+        	 OutputStream outputStream = new FileOutputStream(jSondeOutFile);
+             redirectProcessStreams(process, outputStream);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+	        outputStream.close();
+		}
     }
 
     private static void redirectProcessStreams(final Process process, final OutputStream outputStream) {
@@ -115,7 +121,7 @@ public class Main {
                 InputStream is = process.getInputStream();
                 try {
                     for (int i = is.read(); i != -1; i = is.read()) {
-                        outputStream.write((byte)i);
+                        outputStream.write(i);
                     }
                 } catch (IOException e) {
                 	JOptionPane.showMessageDialog (

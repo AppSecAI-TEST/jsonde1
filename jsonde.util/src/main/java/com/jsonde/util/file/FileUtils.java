@@ -25,26 +25,13 @@ public class FileUtils {
 	 * Stringa FILE_SEPARATOR
 	 */
     public static final String FILE_SEPARATOR = System.getProperty("file.separator");
-    public static final String PATH_SEPARATOR = System.getProperty("path.separator");
-    public static final String USER_HOME = System.getProperty(user());
-
+    
     /**
-	 * Legge da file il nome utente di MySQL
-	 * @return
-	 */
-	private static user() {
-		String s = null;
-		try {
-			@SuppressWarnings("resource")
-			BufferedReader buffer = new BufferedReader(new FileReader("user.txt"));
-			s = buffer.readLine();
-		} catch (IOException e) {
-			JOptionPane.showMessageDialog (
-				null , "Problemi di lettura da file user"
-			);
-		}
-		return s;
-	}
+     * Stringa PATH_SEPARATOR
+     */
+    public static final String PATH_SEPARATOR = System.getProperty("path.separator");
+    private final static String a = "user.home";
+    public static final String USER_HOME = System.getProperty(a);
 	
     public static boolean deleteDirectory(File path) {
         if (path.exists()) {
