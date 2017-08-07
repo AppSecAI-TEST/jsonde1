@@ -41,7 +41,10 @@ public class ClientOutputWorker implements Runnable {
 
             log.info("[ClientOutputWorker] ready");
 
-            while (client.isRunning() || client.isMessageInQueue()) {
+            boolean flag = client.isRunning();
+            boolean flag1 = client.isMessageInQueue();
+            
+            while (flag || flag1) {
 
                 log.info("[ClientOutputWorker] running");
 
@@ -58,15 +61,19 @@ public class ClientOutputWorker implements Runnable {
                 }
 
                 log.info("[ClientOutputWorker] running");
-
+                
             }
 
             log.info("[ClientOutputWorker] stopped");
 
+            flag = client.isRunning();
+            flag1 = client.isMessageInQueue();
+            
         } catch (IOException e) {
             log.error(METHOD_NAME, e);
         } catch (InterruptedException e) {
-            log.error(METHOD_NAME, e);
+            log.error(METHOD_NA
+            		ME, e);
             Thread.currentThread().interrupt();
         } finally {
             IO.close(objectOutputStream);

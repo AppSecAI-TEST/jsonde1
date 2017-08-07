@@ -215,7 +215,7 @@ public class JSondeAgent implements MessageListener, ClassFileTransformer {
                 byteCodeInputStream = classFileResourceURL.openStream();
 
                 int a = byteCodeInputStream.available();
-                while (byteCodeInputStream.available() > 0) {
+                while (a > 0) {
                     originalByteArrayOutputStream.write(byteCodeInputStream.read());
                     a = byteCodeInputStream.available();
                 }

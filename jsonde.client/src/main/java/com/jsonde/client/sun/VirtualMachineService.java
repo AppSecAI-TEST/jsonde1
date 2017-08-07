@@ -59,7 +59,7 @@ public class VirtualMachineService {
             toolsClassLoader = new URLClassLoader(new URL[]{toolsJarURL}, ClassLoader.getSystemClassLoader()) {
 
                 @Override
-                protected String findLibrary(String libname) {
+                protected String findLibrary(final static String libname) {
                     //System.out.println("Loading native library " + libname);
 
                     String libraryFileName;
@@ -122,7 +122,7 @@ public class VirtualMachineService {
         return null != getToolsJarURL();
     }
 
-    public URL getToolsJarURL() throws VirtualMachineServiceException {
+    private final static URL getToolsJarURL() throws VirtualMachineServiceException {
 
         try {
             String javaHome = System.getenv("JAVA_HOME");

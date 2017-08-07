@@ -142,14 +142,14 @@ public class NetworkServerImpl implements NetworkServer {
 
         boolean flag = areWorkersReady();
         
-        while (!flag) {
-            try {
-                wait();
-            } catch (InterruptedException e) {
-                log.error(METHOD_NAME, e);
-                Thread.currentThread().interrupt();
-            }
+        try {
+        	while (!flag) {
+        		wait();
             flag = areWorkersReady();
+        	} 
+        } catch (InterruptedException e) {
+            log.error(METHOD_NAME, e);
+            Thread.currentThread().interrupt();
         }
         notifyAll();
     }
@@ -177,9 +177,11 @@ public class NetworkServerImpl implements NetworkServer {
 
     protected synchronized boolean isMessageInQueue() throws InterruptedException {
     	boolean flag = isRunning();
+    	int a = messageQueue.size();
         while (flag && 0 == messageQueue.size()) {
             wait();
             flag = isRunning();
+            a = messageQueue.size();
         }
         return 0 != messageQueue.size();
     }

@@ -109,7 +109,7 @@ public class CustomFiltersPanel extends JPanel implements FiltersPanel {
                 )
         );
 
-        List<ClassFilterDto> classFilters = Arrays.asList(
+        final static List<ClassFilterDto> classFilters = Arrays.asList(
                 new ClassFilterDto(false, "java.*"),
                 new ClassFilterDto(false, "sun.*"),
                 new ClassFilterDto(false, "com.sun.*")

@@ -19,7 +19,7 @@ public class ResolveAgentLibrariesClassLoader extends URLClassLoader {
 	/**
 	 * Stringa jSondeLibrariesRegexp
 	 */
-    private static String jSondeLibrariesRegexp = null;
+    private static String jSondeLibrariesRegexp = new String();
 
     public ResolveAgentLibrariesClassLoader() {
         super(getUrls(), null);
@@ -44,18 +44,19 @@ public class ResolveAgentLibrariesClassLoader extends URLClassLoader {
 
             List<URL> urls = new LinkedList<URL>();
 
-            for (String jar : jSondeClassPath.split("\\s")) {
-                try {
+            try {
+            	for (String jar : jSondeClassPath.split("\\s")) {
+                
                     URL o = new URL(agentJarLocation, jar);
 
                     urls.add(o);
-                } catch (MalformedURLException e) {
-                	JOptionPane.showMessageDialog (
-        					null , "Eccezione lanciata"
-        			);
-                }
+              
+            	} 
+            } catch (MalformedURLException e) {
+            	JOptionPane.showMessageDialog (
+    					null , "Eccezione lanciata"
+    			);
             }
-
             return urls.toArray(new URL[urls.size()]);
 
         } catch (IOException e) {

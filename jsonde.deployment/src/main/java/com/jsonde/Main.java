@@ -107,8 +107,9 @@ public class Main {
         	 OutputStream outputStream = new FileOutputStream(jSondeOutFile);
              redirectProcessStreams(process, outputStream);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			JOptionPane.showMessageDialog (
+					null , "FileNotFoundException"
+			);
 		} finally {
 	        outputStream.close();
 		}

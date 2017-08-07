@@ -32,28 +32,21 @@ public class DependencyReport implements ReportGenerator {
 
         int i = 0;
 
-        for (Long codeSourceId : dependencies.keySet()) {
-
-            try {
-
+        try {
+        	for (Long codeSourceId : dependencies.keySet()) {
                 CodeSource codeSource = DaoFactory.getCodeSourceDao().get(codeSourceId);
-
                 MutableTreeNode dependencyNode = new DefaultMutableTreeNode(codeSource.getSource());
                 dependencyTreeModel.insertNodeInto(dependencyNode, rootNode, i);
-
                 createTree(
                         dependencies,
                         dependencyTreeModel,
                         dependencyNode,
                         dependencies.get(codeSourceId),
                         new LinkedHashSet<Long>(Arrays.asList(codeSourceId)));
-
-            } catch (DaoException e) {
-                Main.getInstance().processException(e);
-            }
-
             i++;
 
+        } catch (DaoException e) {
+            Main.getInstance().processException(e);
         }
 
         dependencyTree.setModel(dependencyTreeModel);
@@ -75,26 +68,19 @@ public class DependencyReport implements ReportGenerator {
 
         int i = 0;
 
-        for (Long codeSourceId : codeSourceIds) {
-
-            try {
-
-                CodeSource codeSource = DaoFactory.getCodeSourceDao().get(codeSourceId);
-
+        try {
+        	for (Long codeSourceId : codeSourceIds) {
+        		CodeSource codeSource = DaoFactory.getCodeSourceDao().get(codeSourceId);
                 MutableTreeNode dependencyNode = new DefaultMutableTreeNode(codeSource.getSource());
                 dependencyTreeModel.insertNodeInto(dependencyNode, parent, i);
-
                 if (!shownSourceIds.contains(codeSourceId)) {
                     shownSourceIds.add(codeSourceId);
                     createTree(dependencies, dependencyTreeModel, dependencyNode, dependencies.get(codeSourceId), shownSourceIds);
                 }
-
-            } catch (DaoException e) {
-                Main.getInstance().processException(e);
-            }
-
             i++;
-
+            }
+        } catch (DaoException e) {
+            Main.getInstance().processException(e);
         }
 
     }

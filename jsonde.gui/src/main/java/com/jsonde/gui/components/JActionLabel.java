@@ -21,7 +21,7 @@ public class JActionLabel extends JLabel implements MouseListener {
 
         Object nameObject = action.getValue(Action.NAME);
         if (null != nameObject) {
-            super.setText((String) nameObject);
+            super.setText((final static String) nameObject);
         }
 
         this.action = action;
