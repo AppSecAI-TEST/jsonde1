@@ -31,7 +31,7 @@ public class DbUtils {
 
     }
 
-    public static void close(Statement connection) {
+    public static void close(PreparedStatement connection) {
 
         final String METHOD_NAME = "close(Statement)";
 

@@ -56,7 +56,7 @@ public class ObjectIdGenerator<T> {
      * @author gabriele
      *
      */
-    public static class Pair<M, N> extends ObjectWrapper<Pair<M, N>> {
+    protected static class Pair<M, N> extends ObjectWrapper<Pair<M, N>> {
 
         private final M m;
         private final N n;

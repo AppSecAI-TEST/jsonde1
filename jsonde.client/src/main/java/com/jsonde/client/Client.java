@@ -257,7 +257,7 @@ public class Client implements MessageListener {
     			);
             }
 
-        } else if (message instanceof MethodCallMessage) {
+        } else {
 
             MethodCallMessage methodCallMessage =
                     (MethodCallMessage) message;

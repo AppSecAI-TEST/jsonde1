@@ -27,18 +27,10 @@ public class Issue9 {
     }
 
     public static void main(String[] arguments) throws Exception {
-        try {
-            Issue9 issue9 = new Issue9();
-        } catch (Exception e) {
-        	JOptionPane.showMessageDialog (
-					null , "Eccezione lanciata"
-			);
-        }
-
         Thread thread = new Thread(
                 new Runnable() {
                     public void run() {
-                        Issue9 issue9 = new Issue9(1);
+                        
                     }
                 }
         );

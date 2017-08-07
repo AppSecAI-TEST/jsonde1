@@ -76,7 +76,7 @@ public class Application8 implements Runnable {
         return 6;
     }
 
-    static class Class1 {
+    protected static class Class1 {
 
         private int field1;
 
@@ -90,7 +90,7 @@ public class Application8 implements Runnable {
 
     }
 
-    static class Class2 extends Class1 {
+     protected static class Class2 extends Class1 {
 
         Class2(int field1) {
             super(field1);
