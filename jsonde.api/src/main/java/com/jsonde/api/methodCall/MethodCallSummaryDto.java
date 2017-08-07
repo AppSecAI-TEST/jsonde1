@@ -33,6 +33,10 @@ public class MethodCallSummaryDto implements Serializable {
      * StartTime
      */
     public transient long startTime;
+    
+    /**
+     * exceptionCount
+     */
     public int exceptionCount;
     public int invocationCount;
 

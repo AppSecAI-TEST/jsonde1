@@ -97,6 +97,9 @@ public abstract class Profiler {
 
     }
 
+    /**
+     * Stringa ENTER_CONSTRUCTOR_METHOD_NAME 
+     */
     public static final String ENTER_CONSTRUCTOR_METHOD_NAME =
             "enterConstructor";
     public static final String ENTER_CONSTRUCTOR_METHOD_DESCRIPTOR =
