@@ -28,7 +28,7 @@ import net.sf.sdedit.ui.UserInterface;
 import net.sf.sdedit.ui.components.ATabbedPane;
 import net.sf.sdedit.ui.components.ATabbedPaneListener;
 import net.sf.sdedit.ui.impl.UserInterfaceImpl;
-
+import java.lang.reflect.*;
 import javax.swing.*;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreePath;
@@ -286,7 +286,7 @@ public class SdEditUIAdapter implements MethodCallListener, ApplicationUserInter
 
                 Field stainedImageField = ATabbedPane.class.getDeclaredField("stain");
                 stainedImageField.setAccessible(true);
-
+                
                 Field cleanImageField = ATabbedPane.class.getDeclaredField("clean");
                 cleanImageField.setAccessible(true);
 
