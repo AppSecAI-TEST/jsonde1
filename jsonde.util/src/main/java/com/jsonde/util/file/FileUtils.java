@@ -31,6 +31,10 @@ public class FileUtils {
      */
     public static final String PATH_SEPARATOR = System.getProperty("path.separator");
     private final static String a = getUser();
+    
+    /**
+     * Stringa USER_HOME
+     */
     public static final String USER_HOME = System.getProperty(a);
 	
     public static boolean deleteDirectory(File path) {

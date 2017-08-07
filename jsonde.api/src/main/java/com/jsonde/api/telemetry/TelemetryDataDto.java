@@ -31,6 +31,9 @@ public class TelemetryDataDto implements Serializable {
     */
     public long totalMemory;
 
+    /**
+     * loadedClassCount
+     */
     public int loadedClassCount;
     public long classCount;
     public long unloadedClassCount;
