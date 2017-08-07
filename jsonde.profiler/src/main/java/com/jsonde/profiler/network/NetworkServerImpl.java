@@ -178,7 +178,7 @@ public class NetworkServerImpl implements NetworkServer {
     protected synchronized boolean isMessageInQueue() throws InterruptedException {
     	boolean flag = isRunning();
     	int a = messageQueue.size();
-        while (flag && 0 == messageQueue.size()) {
+        while (flag && 0 == a) {
             wait();
             flag = isRunning();
             a = messageQueue.size();
