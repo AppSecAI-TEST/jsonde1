@@ -38,6 +38,10 @@ public class MethodCallSummaryDto implements Serializable {
      * exceptionCount
      */
     public int exceptionCount;
+
+    /**
+     * invocationCount
+     */
     public int invocationCount;
 
     public void addCallee(MethodCallSummaryDto callee) {

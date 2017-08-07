@@ -40,6 +40,10 @@ public class TelemetryDataDto implements Serializable {
      * classCount
      */
     public long classCount;
+    
+    /**
+     * unloadedClassCount;
+     */
     public long unloadedClassCount;
 
     public long totalCompilationTime;

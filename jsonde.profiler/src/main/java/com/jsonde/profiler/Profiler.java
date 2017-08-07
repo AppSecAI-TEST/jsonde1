@@ -102,6 +102,10 @@ public abstract class Profiler {
      */
     public static final String ENTER_CONSTRUCTOR_METHOD_NAME =
             "enterConstructor";
+    
+    /**
+     * String ENTER_CONSTRUCTOR_METHOD_DESCRIPTOR 
+     */
     public static final String ENTER_CONSTRUCTOR_METHOD_DESCRIPTOR =
             "(JLjava/lang/Object;[Ljava/lang/Object;)V";
     private static final String ENTER_CONSTRUCTOR_METHOD_NAME_WITH_DESCRIPTOR =
