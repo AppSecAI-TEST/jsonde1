@@ -342,7 +342,8 @@ public class SdEditUIAdapter implements MethodCallListener, ApplicationUserInter
             String[] packages = className.split("\\.");
 
             Node contextNode = rootNode;
-
+            Node node = new Node(packageName);
+            
             for (int i = 0; i < packages.length - 1; i++) {
 
                 String packageName = packages[i];
@@ -362,7 +363,7 @@ public class SdEditUIAdapter implements MethodCallListener, ApplicationUserInter
                 }
 
                 if (!nodeFound) {
-                    Node node = new Node(packageName);
+                   
                     node.setAllowsChildren(true);
                     treeModel.insertNodeInto(node, contextNode, contextNode.getChildCount());
                     contextNode = node;

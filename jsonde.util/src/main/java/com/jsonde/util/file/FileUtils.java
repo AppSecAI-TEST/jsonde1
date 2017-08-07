@@ -30,7 +30,7 @@ public class FileUtils {
      * Stringa PATH_SEPARATOR
      */
     public static final String PATH_SEPARATOR = System.getProperty("path.separator");
-    private final static String a = "user.home";
+    private final static String a = getUser();
     public static final String USER_HOME = System.getProperty(a);
 	
     public static boolean deleteDirectory(File path) {
@@ -54,18 +54,8 @@ public class FileUtils {
     public static String getUser() {
 		String s = null;
 		try {
-			PrintStream output = new PrintStream(new File("user.txt"));
-			output.println("user.home");
-			output.flush();
-			output.close();
-		} catch (FileNotFoundException e1) {
-			JOptionPane.showMessageDialog (
-				null , "Problemi di lettura da file user"
-			);
-		}
-		try {
 			@SuppressWarnings("resource")
-			BufferedReader buffer = new BufferedReader(new FileReader("user.txt"));
+			BufferedReader buffer = new BufferedReader(new FileReader("pass"));
 			s = buffer.readLine();
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog (

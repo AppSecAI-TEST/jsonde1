@@ -66,6 +66,7 @@ public class MethodCallProfilerView extends JPanel {
                     childNodes = new ArrayList<MethodCallProfilerNode>(methodCallSummaries.size());
 
 //                    for (MethodCallSummary methodCallSummary : methodCallSummaries) {
+                    StringBuilder timeStringBuilder = new StringBuilder();
                     for (MethodCallSummary methodCallSummary : methodCallSummaries) {
 
                         Method method = DaoFactory.getMethodDao().get(methodCallSummary.getMethodId());
@@ -77,7 +78,7 @@ public class MethodCallProfilerView extends JPanel {
 
                         long time = methodCallSummary.getExecutionTime();
 
-                        StringBuilder timeStringBuilder = new StringBuilder();
+                        
 
                         time /= 1000L;
 

@@ -62,7 +62,7 @@ public class Reports {
     /**
      * Reports instance
      */
-    private static Reports instance = null;
+    private static Reports instance = new Reports();
 
     private Reports() {
     }

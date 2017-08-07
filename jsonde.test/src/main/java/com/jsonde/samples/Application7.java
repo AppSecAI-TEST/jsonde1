@@ -16,7 +16,7 @@ public class Application7 {
 	/**
 	 * Throwable exception
 	 */
-    private static volatile Throwable exception = null;
+    private static volatile Throwable exception = new Throwable();
 
     public static void main(String... arguments) throws Throwable {
 

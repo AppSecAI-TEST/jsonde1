@@ -39,7 +39,7 @@ public abstract class Profiler {
     /**
      * Profiler profiler
      */
-    private static volatile Profiler profiler = null;
+    private static volatile Profiler profiler = new Profiler();
 
     public static Profiler initializeProfiler(Instrumentation instrumentation, int port) {
         profiler = new ProfilerImpl(instrumentation, port);

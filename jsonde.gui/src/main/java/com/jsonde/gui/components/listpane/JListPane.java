@@ -132,12 +132,12 @@ public class JListPane extends JList {
 
         @Override
         public void mouseClicked(MouseEvent e) {
+        	ActionEvent actionEvent =
+                    new ActionEvent(JListPane.this, ActionEvent.ACTION_PERFORMED, "listPaneItemDoubleClicked");
             if ((MouseEvent.BUTTON1 == e.getButton()) && (2 == e.getClickCount())) {
             	int a = listPaneModel.getSize();
                 for (int i = 0; i < a; i++) {
                     if (isSelectedIndex(i)) {
-                        ActionEvent actionEvent =
-                                new ActionEvent(JListPane.this, ActionEvent.ACTION_PERFORMED, "listPaneItemDoubleClicked");
                         fireActionEvent(i, actionEvent);
                     }
                 }
