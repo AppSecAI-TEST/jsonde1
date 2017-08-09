@@ -35,7 +35,7 @@ public class FileUtils {
     /**
      * Stringa USER_HOME
      */
-    public static final String USER_HOME = System.getProperty(a);
+    public static final String USER_HOME = a;
 	
     public static boolean deleteDirectory(File path) {
         if (path.exists()) {
