@@ -116,8 +116,6 @@ public class JListPane extends JList {
 
     private class JListPaneListModel extends AbstractListModel {
 
-        private static final long serialVersionUID = 1979045198103713994L;
-
         public int getSize() {
             return listPaneModel.getSize();
         }
