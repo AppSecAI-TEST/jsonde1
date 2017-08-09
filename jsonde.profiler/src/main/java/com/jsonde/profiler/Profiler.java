@@ -300,38 +300,30 @@ public abstract class Profiler {
 
                     public void run() {
 
-                        int threadsCount = Thread.activeCount();
-                        Thread[] threads = new Thread[threadsCount];
-                        Thread.enumerate(threads);
+                    
 
                         try {
-
+                        	int threadsCount = Thread.activeCount();
+                            Thread[] threads = new Thread[threadsCount];
+                            Thread.enumerate(threads);
                             for (int i = 0; i < 1000; i++) {
                                 Thread.yield();
                             }
 
                             for (Thread thread : threads) {
 
-                                if (Thread.currentThread() == thread || null == thread)
-                                    continue;
-
-                                if (thread.isAlive()) {
-                                    thread.join(250);
+                                if ((Thread.currentThread() == thread || null == thread)&&thread.isAlive()){
+                                	thread.join(250);
                                 }
-
                             }
 
                             if (Thread.activeCount() > 1) {
                                 Thread.sleep(500);
                             }
-
+                            stop();
                         } catch (InterruptedException e) {
                             Thread.currentThread().interrupt();
                             log.error("Profiler Shutdown Hook", e);
-                        }
-
-                        try {
-                            stop();
                         } catch (NetworkServerException e) {
                             log.error("Profiler Shutdown Hook", e);
                         }

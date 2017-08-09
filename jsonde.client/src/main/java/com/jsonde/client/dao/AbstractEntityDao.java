@@ -272,8 +272,8 @@ public abstract class AbstractEntityDao<T extends DomainObject> extends Abstract
                 domainObjectClassBeanInfo.getPropertyDescriptors()) {
             String propertyName = propertyDescriptor.getName();
 
-            if ("id".equalsIgnoreCase(propertyName)) continue;
-            if ("class".equalsIgnoreCase(propertyName)) continue;
+            if ("id".equalsIgnoreCase(propertyName)&&"class".equalsIgnoreCase(propertyName)) 
+            	continue;
 
             insertQueryBuilder.
                     append(", ").
@@ -374,8 +374,8 @@ public abstract class AbstractEntityDao<T extends DomainObject> extends Abstract
                 domainObjectClassBeanInfo.getPropertyDescriptors()) {
             String propertyName = propertyDescriptor.getName();
 
-            if ("id".equalsIgnoreCase(propertyName)) continue;
-            if ("class".equalsIgnoreCase(propertyName)) continue;
+            if ("id".equalsIgnoreCase(propertyName)&&"class".equalsIgnoreCase(propertyName) 
+            		continue;
 
             getQueryBuilder.
                     append(", ").
@@ -489,8 +489,8 @@ public abstract class AbstractEntityDao<T extends DomainObject> extends Abstract
                 domainObjectClassBeanInfo.getPropertyDescriptors()) {
             String propertyName = propertyDescriptor.getName();
 
-            if ("id".equalsIgnoreCase(propertyName)) continue;
-            if ("class".equalsIgnoreCase(propertyName)) continue;
+            if ("id".equalsIgnoreCase(propertyName)&&"class".equalsIgnoreCase(propertyName)) 
+            	continue;
 
             getQueryBuilder.
                     append(", ").

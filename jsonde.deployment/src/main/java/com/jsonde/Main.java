@@ -102,7 +102,7 @@ public class Main {
 
         File jSondeOutFile = new File(JSONDE_OUT);
         FileUtils.createFile(jSondeOutFile);
-        OutputStream outputStream = new FileOutputStream(jSondeOutFile);
+        OutputStream outputStream;
         try {
         	 OutputStream outputStream = new FileOutputStream(jSondeOutFile);
              redirectProcessStreams(process, outputStream);
@@ -111,7 +111,9 @@ public class Main {
 					null , "FileNotFoundException"
 			);
 		} finally {
-	        outputStream.close();
+	        if (outputStream!=null){
+	        	outputStream.close();
+	        }
 		}
     }
 
