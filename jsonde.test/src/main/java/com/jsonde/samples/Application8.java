@@ -62,11 +62,11 @@ public class Application8 implements Runnable {
     }
 
     private void method4() {
-        throw new RuntimeException();
+        throw new Exception();
     }
 
     private void method5() {
-        throw new RuntimeException();
+        throw new Exception();
     }
 
     private void method6() {

@@ -118,10 +118,10 @@ public class SdEditDataRenderer {
 
         } catch (IOException e) {
             Main.getInstance().processException(e);
-            throw new RuntimeException(e);
+            throw new Exception(e);
         } catch (DaoException e) {
             Main.getInstance().processException(e);
-            throw new RuntimeException(e);
+            throw new Exception(e);
         }
 
     }

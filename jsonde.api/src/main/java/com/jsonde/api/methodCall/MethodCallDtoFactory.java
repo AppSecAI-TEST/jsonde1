@@ -27,7 +27,7 @@ public class MethodCallDtoFactory extends ObjectPool<MethodCallDto> {
         try {
             return instance.takeFromPool();
         } catch (ObjectPoolException e) {
-            throw new RuntimeException(e);
+            throw new Exception(e);
         }
     }
 

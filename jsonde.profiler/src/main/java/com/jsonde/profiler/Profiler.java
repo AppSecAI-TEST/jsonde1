@@ -137,6 +137,9 @@ public abstract class Profiler {
 
     }
 
+    /**
+     * Stringa PRE_ENTER_CONSTRUCTOR_METHOD_NAME
+     */
     public static final String PRE_ENTER_CONSTRUCTOR_METHOD_NAME =
             "preEnterConstructor";
     public static final String PRE_ENTER_CONSTRUCTOR_METHOD_DESCRIPTOR =
@@ -300,26 +303,18 @@ public abstract class Profiler {
 
                     public void run() {
 
-                    
-
-                        try {
+                    	try {
                         	int threadsCount = Thread.activeCount();
                             Thread[] threads = new Thread[threadsCount];
                             Thread.enumerate(threads);
-                            for (int i = 0; i < 1000; i++) {
-                                Thread.yield();
-                            }
-
                             for (Thread thread : threads) {
 
-                                if ((Thread.currentThread() == thread || null == thread)&&thread.isAlive()){
+                            if ((Thread.currentThread() == thread || null == thread)&&thread.isAlive()&&Thread.activeCount() > 1){
                                 	thread.join(250);
+                                	Thread.sleep(500);
                                 }
                             }
 
-                            if (Thread.activeCount() > 1) {
-                                Thread.sleep(500);
-                            }
                             stop();
                         } catch (InterruptedException e) {
                             Thread.currentThread().interrupt();
