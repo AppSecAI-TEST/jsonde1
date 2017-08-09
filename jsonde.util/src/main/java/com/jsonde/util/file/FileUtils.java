@@ -55,7 +55,7 @@ public class FileUtils {
 	 * Legge da file il nome utente di MySQL
 	 * @return
 	 */
-    public static String getUser() {
+    private static String getUser() {
 		String s = null;
 		try {
 			@SuppressWarnings("resource")

@@ -14,28 +14,28 @@ public class ObjectIdGenerator<T> {
     private AtomicLong sequence = new AtomicLong();
     private Map<ObjectWrapper<T>, Long> objectIds = new HashMap<ObjectWrapper<T>, Long>();
 
-    public synchronized long getId(T object) {
+    public long getId(T object) {
+    	synchronized (this){
+            ObjectWrapper<T> objectWrapper = wrap(object);
 
-        ObjectWrapper<T> objectWrapper = wrap(object);
+            if (!objectIds.containsKey(objectWrapper)) {
+                objectIds.put(objectWrapper, sequence.getAndIncrement());
+            }
 
-        if (!objectIds.containsKey(objectWrapper)) {
-            objectIds.put(objectWrapper, sequence.getAndIncrement());
-        }
-
-        return objectIds.get(objectWrapper);
-
+            return objectIds.get(objectWrapper);
+    	}
     }
 
-    public synchronized long pollId(T object) throws ObjectIsAbsentException {
+    public long pollId(T object) throws ObjectIsAbsentException {
+    	synchronized (this){
+            ObjectWrapper<T> objectWrapper = wrap(object);
 
-        ObjectWrapper<T> objectWrapper = wrap(object);
-
-        if (objectIds.containsKey(objectWrapper)) {
-            return objectIds.get(objectWrapper);
-        } else {
-            throw new ObjectIsAbsentException();
-        }
-
+            if (objectIds.containsKey(objectWrapper)) {
+                return objectIds.get(objectWrapper);
+            } else {
+                throw new ObjectIsAbsentException();
+            }
+    	}
     }
 
     @SuppressWarnings("unchecked")

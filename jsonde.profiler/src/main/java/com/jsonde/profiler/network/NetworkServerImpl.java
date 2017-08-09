@@ -124,20 +124,23 @@ public class NetworkServerImpl implements NetworkServer {
 
     }
 
-    private synchronized void closeSockets() throws NetworkServerException {
-        try {
-            if (null != socket)
-                socket.close();
-            if (null != serverSocket)
-                serverSocket.close();
-        } catch (IOException e) {
-            throw new NetworkServerException(e);
-        }
-        notifyAll();
+    private void closeSockets() throws NetworkServerException {
+    	synchronized (this) {
+    		try {
+                if (null != socket)
+                    socket.close();
+                if (null != serverSocket)
+                    serverSocket.close();
+            } catch (IOException e) {
+                throw new NetworkServerException(e);
+            }
+            notifyAll();
+    	}
     }
 
-    private synchronized void waitForInitialization() {
+    private void waitForInitialization() {
 
+    	synchronized (this) {
         final String METHOD_NAME = "waitForInitialization()";
 
         boolean flag = areWorkersReady();
@@ -152,44 +155,51 @@ public class NetworkServerImpl implements NetworkServer {
             Thread.currentThread().interrupt();
         }
         notifyAll();
+    	}
     }
 
-    public synchronized void sendMessage(Message message) {
+    public void sendMessage(Message message) {
+    	synchronized (this){
+            final String METHOD_NAME = "sendMessage(Message)";
 
-        final String METHOD_NAME = "sendMessage(Message)";
-
-        try {
-            boolean inserted = false;
-            while (!inserted) {
-                inserted = messageQueue.offer(message);
-                if (inserted) {
-                    notifyAll();
-                } else {
-                    wait();
+            try {
+                boolean inserted = false;
+                while (!inserted) {
+                    inserted = messageQueue.offer(message);
+                    if (inserted) {
+                        notifyAll();
+                    } else {
+                        wait();
+                    }
                 }
+            } catch (InterruptedException e) {
+                log.error(METHOD_NAME, e);
+                Thread.currentThread().interrupt();
             }
-        } catch (InterruptedException e) {
-            log.error(METHOD_NAME, e);
-            Thread.currentThread().interrupt();
-        }
+
+    	}
     }
 
 
-    protected synchronized boolean isMessageInQueue() throws InterruptedException {
-    	boolean flag = isRunning();
-    	int a = messageQueue.size();
-        while (flag && 0 == a) {
-            wait();
-            flag = isRunning();
-            a = messageQueue.size();
-        }
-        return 0 != messageQueue.size();
+    protected boolean isMessageInQueue() throws InterruptedException {
+    	synchronized (this){
+    		boolean flag = isRunning();
+        	int a = messageQueue.size();
+            while (flag && 0 == a) {
+                wait();
+                flag = isRunning();
+                a = messageQueue.size();
+            }
+            return 0 != messageQueue.size();
+    	}
     }
 
-    protected synchronized Message takeMessageFromQueue() {
-        Message message = messageQueue.poll();
-        notifyAll();
-        return message;
+    protected Message takeMessageFromQueue() {
+        synchronized (this){
+        	Message message = messageQueue.poll();
+            notifyAll();
+            return message;
+        }
     }
 
     protected void processMessage(Message message) {
@@ -208,27 +218,37 @@ public class NetworkServerImpl implements NetworkServer {
     }
 
 
-    public synchronized boolean isRunning() {
-        return running;
+    public boolean isRunning() {
+    	synchronized (this){
+    		return running;
+    	}
     }
 
-    public synchronized void setRunning(boolean running) {
-        this.running = running;
-        notifyAll();
+    public void setRunning(boolean running) {
+    	synchronized (this){
+    		this.running = running;
+            notifyAll();
+    	}
     }
 
-    private synchronized boolean areWorkersReady() {
-        return inputWorkerReady && outputWorkerReady;
+    private boolean areWorkersReady() {
+    	synchronized (this){
+    		return inputWorkerReady && outputWorkerReady;
+    	}
     }
 
-    public synchronized void setOutputWorkerReady(boolean outputWorkerReady) {
-        this.outputWorkerReady = outputWorkerReady;
-        notifyAll();
+    public void setOutputWorkerReady(boolean outputWorkerReady) {
+    	synchronized (this){
+    		this.outputWorkerReady = outputWorkerReady;
+            notifyAll();
+    	}
     }
 
-    public synchronized void setInputWorkerReady(boolean inputWorkerReady) {
-        this.inputWorkerReady = inputWorkerReady;
-        notifyAll();
+    public void setInputWorkerReady(boolean inputWorkerReady) {
+    	synchronized (this){
+    		this.inputWorkerReady = inputWorkerReady;
+            notifyAll();
+    	}
     }
 
 }

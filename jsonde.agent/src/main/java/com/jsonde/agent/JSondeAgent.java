@@ -314,40 +314,44 @@ public class JSondeAgent implements MessageListener, ClassFileTransformer {
         return transform;
     }
 
-    public synchronized void startServer() throws NetworkServerException {
+    public void startServer() throws NetworkServerException {
 
-        final String METHOD_NAME = "startServer()";
+    	synchronized (this){
+    		final String METHOD_NAME = "startServer()";
 
-        profiler.addMessageListener(this);
-        profiler.start();
-        try {
-        	while (null == agentConfigurationMessage) {
-                wait();
+            profiler.addMessageListener(this);
+            profiler.start();
+            try {
+            	while (null == agentConfigurationMessage) {
+                    wait();
+                }
+            } catch (InterruptedException e) {
+                    log.error(METHOD_NAME, e);
+                    Thread.currentThread().interrupt();    
             }
-        } catch (InterruptedException e) {
-                log.error(METHOD_NAME, e);
-                Thread.currentThread().interrupt();    
-        }
 
-        profiler.removeMessageListener(this);
+            profiler.removeMessageListener(this);
 
+    	}
     }
 
     private volatile AgentConfigurationMessage agentConfigurationMessage;
 
-    public synchronized void onMessage(Message message) {
+    public void onMessage(Message message) {
 
-        final String METHOD_NAME = "onMessage(Message)";
+    	synchronized (this){
+    		final String METHOD_NAME = "onMessage(Message)";
 
-        if (log.isTraceEnabled()) {
-            log.trace(METHOD_NAME, "Recieved Message" + message);
-        }
+            if (log.isTraceEnabled()) {
+                log.trace(METHOD_NAME, "Recieved Message" + message);
+            }
 
-        if (message instanceof AgentConfigurationMessage) {
-            agentConfigurationMessage = (AgentConfigurationMessage) message;
-            notifyAll();
-        }
+            if (message instanceof AgentConfigurationMessage) {
+                agentConfigurationMessage = (AgentConfigurationMessage) message;
+                notifyAll();
+            }
 
+    	}
     }
 
 }

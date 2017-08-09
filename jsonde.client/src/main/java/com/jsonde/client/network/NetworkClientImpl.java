@@ -114,50 +114,56 @@ public class NetworkClientImpl implements NetworkClient {
 
     }
 
-    private synchronized void closeSockets() throws NetworkClientException {
-        try {
-            socket.close();
-        } catch (IOException e) {
-            throw new NetworkClientException(e);
-        }
-        notifyAll();
-    }
-
-    private synchronized void waitForInitialization() {
-
-        final String METHOD_NAME = "waitForInitialization()";
-
-        boolean flag = areWorkersReady();
-        try {
-        	while (!flag) {
-        		wait();
-            flag = areWorkersReady();
-        	}
-        } catch (InterruptedException e) {
-            log.error(METHOD_NAME, e);
-            Thread.currentThread().interrupt();
-        }
-        notifyAll();
-    }
-
-    public synchronized void sendMessage(Message message) {
-
-        final String METHOD_NAME = "sendMessage(Message)";
-
-        try {
-            boolean inserted = false;
-            while (!inserted) {
-                inserted = messageQueue.offer(message);
-                if (inserted) {
-                    notifyAll();
-                } else {
-                    wait();
-                }
+    private void closeSockets() throws NetworkClientException {
+    	synchronized (this){
+    		try {
+                socket.close();
+            } catch (IOException e) {
+                throw new NetworkClientException(e);
             }
-        } catch (InterruptedException e) {
-            log.error(METHOD_NAME, e);
-            Thread.currentThread().interrupt();
-        }
+            notifyAll();
+    	}
+    }
+
+    private void waitForInitialization() {
+    	synchronized (this){
+            final String METHOD_NAME = "waitForInitialization()";
+
+            boolean flag = areWorkersReady();
+            try {
+            	while (!flag) {
+            		wait();
+                flag = areWorkersReady();
+            	}
+            } catch (InterruptedException e) {
+                log.error(METHOD_NAME, e);
+                Thread.currentThread().interrupt();
+            }
+            notifyAll();
+    	}
+    }
+
+    public void sendMessage(Message message) {
+
+    	synchronized (this){
+    		final String METHOD_NAME = "sendMessage(Message)";
+
+            try {
+                boolean inserted = false;
+                while (!inserted) {
+                    inserted = messageQueue.offer(message);
+                    if (inserted) {
+                        notifyAll();
+                    } else {
+                        wait();
+                    }
+                }
+            } catch (InterruptedException e) {
+                log.error(METHOD_NAME, e);
+                Thread.currentThread().interrupt();
+            }
+
+    	}
     }
 
     public <T extends FunctionResponse> T invokeFunction(final FunctionRequest<T> functionRequest)
@@ -191,21 +197,25 @@ public class NetworkClientImpl implements NetworkClient {
     }
 
 
-    protected synchronized boolean isMessageInQueue() throws InterruptedException {
-    	boolean flag = isRunning();
-    	int a = messageQueue.size();
-        while (flag && 0 == a) {
-            wait();
-            flag = isRunning();
-            a = messageQueue.size();
-        }
-        return 0 != messageQueue.size();
+    protected boolean isMessageInQueue() throws InterruptedException {
+    	synchronized (this){
+    		boolean flag = isRunning();
+        	int a = messageQueue.size();
+            while (flag && 0 == a) {
+                wait();
+                flag = isRunning();
+                a = messageQueue.size();
+            }
+            return 0 != messageQueue.size();
+    	}
     }
 
-    protected synchronized Message takeMessageFromQueue() {
-        Message message = messageQueue.poll();
-        notifyAll();
-        return message;
+    protected Message takeMessageFromQueue() {
+    	synchronized (this){
+    		Message message = messageQueue.poll();
+            notifyAll();
+            return message;
+    	}
     }
 
     private ExecutorService processMessageExecutorService = Executors.newSingleThreadExecutor();
@@ -235,27 +245,37 @@ public class NetworkClientImpl implements NetworkClient {
     }
 
 
-    public synchronized boolean isRunning() {
-        return running;
+    public boolean isRunning() {
+    	synchronized (this){
+    		return running;
+    	}
     }
 
-    public synchronized void setRunning(boolean running) {
-        this.running = running;
-        notifyAll();
+    public void setRunning(boolean running) {
+    	synchronized (this){
+    		this.running = running;
+            notifyAll();
+    	}
     }
 
-    private synchronized boolean areWorkersReady() {
-        return inputWorkerReady && outputWorkerReady;
+    private boolean areWorkersReady() {
+    	synchronized (this){
+    		return inputWorkerReady && outputWorkerReady;
+    	}
     }
 
-    public synchronized void setOutputWorkerReady(boolean outputWorkerReady) {
-        this.outputWorkerReady = outputWorkerReady;
-        notifyAll();
+    public void setOutputWorkerReady(boolean outputWorkerReady) {
+    	synchronized (this){
+    		this.outputWorkerReady = outputWorkerReady;
+            notifyAll();
+    	}
     }
 
-    public synchronized void setInputWorkerReady(boolean inputWorkerReady) {
-        this.inputWorkerReady = inputWorkerReady;
-        notifyAll();
+    public void setInputWorkerReady(boolean inputWorkerReady) {
+    	synchronized (this){
+    		this.inputWorkerReady = inputWorkerReady;
+            notifyAll();
+    	}
     }
 
 }
