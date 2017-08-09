@@ -37,7 +37,7 @@ public class ThreadLocalProfiler {
         enterMethodImpl(methodId, null, null);
     }
 
-    protected void enterConstructorImpl(long methodId, Object object, Object[] arguments) {
+    protected void enterConstructorImpl(long methodId, Object object) {
         if (isProfilerCode) return;
 
         try {
@@ -60,7 +60,7 @@ public class ThreadLocalProfiler {
         }
     }
 
-    protected void enterMethodImpl(long methodId, Object object, Object[] arguments) {
+    protected void enterMethodImpl(long methodId, Object object) {
 
         if (isProfilerCode) return;
 
@@ -129,7 +129,7 @@ public class ThreadLocalProfiler {
 
     }
 
-    protected void leaveMethodImpl(boolean isVoid, boolean isThrowsException, Object result) {
+    protected void leaveMethodImpl(boolean isVoid, boolean isThrowsException) {
 
         if (isProfilerCode) return;
 

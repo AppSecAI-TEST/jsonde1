@@ -33,19 +33,19 @@ public class JActionIcon extends JLabel implements MouseListener {
 
     }
 
-    public void mouseEntered(MouseEvent e) {
+    public void mouseEntered() {
         setBorder(BorderFactory.createRaisedBevelBorder());
     }
 
-    public void mouseExited(MouseEvent e) {
+    public void mouseExited() {
         setBorder(emptyBorder);
     }
 
-    public void mousePressed(MouseEvent e) {
+    public void mousePressed() {
         setBorder(BorderFactory.createLoweredBevelBorder());
     }
 
-    public void mouseReleased(MouseEvent e) {
+    public void mouseReleased() {
         setBorder(emptyBorder);
 
         Component component = e.getComponent();
@@ -55,7 +55,7 @@ public class JActionIcon extends JLabel implements MouseListener {
         }
     }
 
-    public void mouseClicked(MouseEvent e) {
+    public void mouseClicked() {
     }
 
 }

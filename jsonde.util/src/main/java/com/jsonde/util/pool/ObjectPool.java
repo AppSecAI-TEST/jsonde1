@@ -38,10 +38,10 @@ public class ObjectPool<T> {
         }
     }
 
-    protected void passivate(T element) {
+    protected void passivate() {
     }
 
-    protected void activate(T element) {
+    protected void activate() {
     }
 
     protected T create() throws ObjectPoolException {
