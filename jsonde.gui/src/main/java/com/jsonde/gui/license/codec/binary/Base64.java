@@ -440,10 +440,7 @@ public class Base64 implements BinaryEncoder, BinaryDecoder {
     void encode(byte[] in, int inPos, int inAvail) {
         if (eof) {
             return;
-        }
-        // inAvail < 0 is how we're informed of EOF in the underlying data we're
-        // encoding.
-        if (inAvail < 0) {
+        } else if (inAvail < 0) {
             eof = true;
             if (buffer == null || buffer.length - pos < encodeSize) {
                 resizeBuffer();
@@ -525,8 +522,7 @@ public class Base64 implements BinaryEncoder, BinaryDecoder {
     void decode(byte[] in, int inPos, int inAvail) {
         if (eof) {
             return;
-        }
-        if (inAvail < 0) {
+        } else if (inAvail < 0) {
             eof = true;
         }
         for (int i = 0; i < inAvail; i++) {

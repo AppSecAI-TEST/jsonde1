@@ -190,21 +190,20 @@ public class JSondeAgent implements MessageListener, ClassFileTransformer {
 
         String className = clazz.getName();
 
-        if (shouldTransformClass(className)) {
-
-            URL classFileResourceURL;
-
+        if (shouldTransformClass(className)&&) {
+        	URL classFileResourceURL;
             ClassLoader classLoader = clazz.getClassLoader();
-
+            classFileResourceURL = ClassLoader.getSystemResource(
+                    ClassUtils.convertClassNameToResourceName(className));
             if (null == classLoader) {
                 classFileResourceURL = ClassLoader.getSystemResource(
                         ClassUtils.convertClassNameToResourceName(className));
-            } else {
+            } else if (null == classLoader) {
+            	URL classFileResourceURL;
+                ClassLoader classLoader = clazz.getClassLoader();
                 classFileResourceURL = classLoader.getResource(
                         ClassUtils.convertClassNameToResourceName(className));
-            }
-
-            if (null == classFileResourceURL)
+            } else if (null == classFileResourceURL)
                 return;
 
             InputStream byteCodeInputStream = null;
@@ -257,12 +256,8 @@ public class JSondeAgent implements MessageListener, ClassFileTransformer {
             ProtectionDomain protectionDomain,
             byte[] classfileBuffer) throws IllegalClassFormatException {
 
-        if (null != agentConfigurationMessage && null != agentConfigurationMessage.getClassFilters()) {
-
-            if (!shouldTransformClass(className)) {
+        if (null != agentConfigurationMessage && null != agentConfigurationMessage.getClassFilters()&&!shouldTransformClass(className)) {
                 return classfileBuffer;
-            }
-
         }
 
         Thread currentThread = Thread.currentThread();
@@ -280,17 +275,14 @@ public class JSondeAgent implements MessageListener, ClassFileTransformer {
 
             byte[] transformedBytes = byteCodeTransformer.transform(loader, className, classBeingRedefined, protectionDomain, classfileBuffer);
 
-            if (null == loader || null == loader.getParent()) {
+            if ((null == loader || null == loader.getParent())&&!name.startsWith("com.jsonde")) {
 
                 String name = ClassUtils.getFullyQualifiedName(className);
 
-                if (!name.startsWith("com.jsonde")) {
-                    Profiler.getProfiler().redefineClass(
-                            transformedBytes,
-                            name,
-                            loader);
-                }
-
+                
+                Profiler.getProfiler().redefineClass(
+                		transformedBytes,name,loader
+                );
                 return classfileBuffer;
 
             } else {
