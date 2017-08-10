@@ -54,10 +54,6 @@ public class ClassUtils {
         for (String classPathElement : classPath.split(pathSeparator)) {
             System.out.println(classPathElement);
 
-            String classPathElement = MyRegexRepository.getRegex(classPathElement);
-            
-            classPathFile = new File(classPathElement);
-
             if (classPathFile.exists()) {
 
                 if (classPathFile.isDirectory()) {
