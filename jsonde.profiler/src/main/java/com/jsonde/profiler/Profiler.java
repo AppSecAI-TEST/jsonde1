@@ -68,6 +68,10 @@ public abstract class Profiler {
      */
     public static final String ENTER_METHOD_METHOD_DESCRIPTOR =
             "(JLjava/lang/Object;[Ljava/lang/Object;)V";
+    
+    /**
+     * Stringa ENTER_METHOD_METHOD_NAME_WITH_DESCRIPTOR
+     */
     private static final String ENTER_METHOD_METHOD_NAME_WITH_DESCRIPTOR =
             ENTER_METHOD_METHOD_NAME + ENTER_METHOD_METHOD_DESCRIPTOR;
 
