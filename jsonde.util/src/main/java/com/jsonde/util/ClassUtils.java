@@ -2,7 +2,6 @@ package com.jsonde.util;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.jar.JarEntry;
@@ -54,7 +53,7 @@ public class ClassUtils {
 
     }
 
-    private static Set<String> getPackagesFromDirectory(File directory) {
+    public static Set<String> getPackagesFromDirectory(File directory) {
         return getPackagesFromDirectory(directory, directory);
     }
 
