@@ -97,20 +97,22 @@ public class RegisterMethodMessage extends Message {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
+    	if (this == o){
+        	return true;
+        }
         if (o == null || getClass() != o.getClass()) return false;
 
         RegisterMethodMessage that = (RegisterMethodMessage) o;
 
-        if (access != that.access) return false;
-        if (classId != that.classId) return false;
-        if (methodId != that.methodId) return false;
-        if (desc != null ? !desc.equals(that.desc) : that.desc != null) return false;
-        if (!Arrays.equals(exceptions, that.exceptions)) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (signature != null ? !signature.equals(that.signature) : that.signature != null) return false;
-
-        return true;
+        if (
+        		access != that.access||classId != that.classId||version != that.version||!Arrays.equals(interfaces, that.interfaces)||
+        		name != null ? !name.equals(that.name) : that.name != null||signature != null ? !signature.equals(that.signature||
+        		superName != null ? !superName.equals(that.superName
+        ){
+        		return false;
+        } else {
+        	return true;
+        }
     }
 
     @Override

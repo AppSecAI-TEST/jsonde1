@@ -528,25 +528,23 @@ public class Base64 implements BinaryEncoder, BinaryDecoder {
         for (int i = 0; i < inAvail; i++) {
             if (buffer == null || buffer.length - pos < decodeSize) {
                 resizeBuffer();
-            }
-            byte b = in[inPos++];
-            if (b == PAD) {
+            } else if (b == PAD) {
                 // We're done.
-                eof = true;
+            	byte b = in[inPos++];
+            	eof = true;
                 break;
-            } else {
-                if (b >= 0 && b < DECODE_TABLE.length) {
+            } else if (b >= 0 && b < DECODE_TABLE.length) {
                     int result = DECODE_TABLE[b];
                     if (result >= 0) {
                         modulus = (++modulus) % 4;
                         x = (x << 6) + result;
                         
                     }
-                    if (modulus == 0&&result >= 0) {
-                        buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
-                        buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
-                        buffer[pos++] = (byte) (x & MASK_8BITS);
-                    }
+                    
+                } if (modulus == 0&&result >= 0) {
+                    buffer[pos++] = (byte) ((x >> 16) & MASK_8BITS);
+                    buffer[pos++] = (byte) ((x >> 8) & MASK_8BITS);
+                    buffer[pos++] = (byte) (x & MASK_8BITS);
                 }
             }
         }

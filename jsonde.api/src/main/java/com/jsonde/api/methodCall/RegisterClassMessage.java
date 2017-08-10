@@ -102,20 +102,22 @@ public class RegisterClassMessage extends Message {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
+        if (this == o){
+        	return true;
+        }
         if (o == null || getClass() != o.getClass()) return false;
 
         RegisterClassMessage that = (RegisterClassMessage) o;
 
-        if (access != that.access) return false;
-        if (classId != that.classId) return false;
-        if (version != that.version) return false;
-        if (!Arrays.equals(interfaces, that.interfaces)) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (signature != null ? !signature.equals(that.signature) : that.signature != null) return false;
-        if (superName != null ? !superName.equals(that.superName) : that.superName != null) return false;
-
-        return true;
+        if (
+        		access != that.access||classId != that.classId||version != that.version||!Arrays.equals(interfaces, that.interfaces)||
+        		name != null ? !name.equals(that.name) : that.name != null||signature != null ? !signature.equals(that.signature||
+        		superName != null ? !superName.equals(that.superName
+        ){
+        		return false;
+        } else {
+        	return true;
+        }
     }
 
     @Override

@@ -138,10 +138,14 @@ public abstract class Profiler {
     }
 
     /**
-     * String PRE_ENTER_CONSTRUCTOR_METHOD_NAME
+     * Stringa PRE_ENTER_CONSTRUCTOR_METHOD_NAME
      */
     public static final String PRE_ENTER_CONSTRUCTOR_METHOD_NAME =
             "preEnterConstructor";
+    
+    /**
+     * Stringa PRE_ENTER_CONSTRUCTOR_METHOD_DESCRIPTOR
+     */
     public static final String PRE_ENTER_CONSTRUCTOR_METHOD_DESCRIPTOR =
             "(J)V";
     public static final String PRE_ENTER_CONSTRUCTOR_METHOD_NAME_WITH_DESCRIPTOR =

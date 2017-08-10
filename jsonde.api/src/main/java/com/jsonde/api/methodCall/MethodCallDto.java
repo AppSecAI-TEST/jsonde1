@@ -49,6 +49,10 @@ public class MethodCallDto implements Serializable {
      * long methodId
      */
     public long methodId;
+    
+    /**
+     * actualClassId
+     */
     public long actualClassId;
 
     public long executionTime;
