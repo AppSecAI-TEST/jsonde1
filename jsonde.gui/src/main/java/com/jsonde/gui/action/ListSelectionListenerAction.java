@@ -1,6 +1,5 @@
 package com.jsonde.gui.action;
 
-import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 

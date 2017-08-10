@@ -2,8 +2,6 @@ package com.jsonde.gui.action;
 
 import com.jsonde.gui.ApplicationUserInterface;
 import net.sf.sdedit.icons.Icons;
-
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 /**

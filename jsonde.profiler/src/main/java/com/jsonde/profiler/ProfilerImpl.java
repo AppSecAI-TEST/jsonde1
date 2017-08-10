@@ -1,6 +1,5 @@
 package com.jsonde.profiler;
 
-import com.jsonde.api.Message;
 import com.jsonde.api.MessageListener;
 import com.jsonde.api.function.FunctionRequest;
 import com.jsonde.api.function.FunctionResponse;
@@ -20,7 +19,6 @@ import com.jsonde.util.ClassUtils;
 import com.jsonde.util.ObjectIdGenerator;
 import com.jsonde.util.ObjectIsAbsentException;
 import com.jsonde.util.log.Log;
-
 import java.lang.instrument.ClassDefinition;
 import java.lang.instrument.Instrumentation;
 import java.lang.instrument.UnmodifiableClassException;

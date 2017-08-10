@@ -3,9 +3,6 @@ package com.jsonde;
 import com.jsonde.util.file.FileUtils;
 import com.jsonde.util.io.IO;
 
-import javax.swing.*;
-import java.io.*;
-
 /**
  * Commenti Javadoc
  * @author gabriele

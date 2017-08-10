@@ -2,8 +2,6 @@ package com.jsonde.gui.action.composite;
 
 import com.jsonde.gui.ApplicationUserInterface;
 import com.jsonde.gui.components.composite.CompositeComponentProvider;
-
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 

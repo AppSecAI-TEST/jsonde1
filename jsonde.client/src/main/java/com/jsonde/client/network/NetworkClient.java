@@ -18,6 +18,9 @@ public interface NetworkClient {
 
     void sendMessage(Message message);
 
+    /**
+     * @throws InterruptedException
+     */
     //FunctionResponse invokeFunction(final FunctionRequest functionRequest) throws InterruptedException;
     <T extends FunctionResponse> T invokeFunction(final FunctionRequest<T> functionRequest) throws InterruptedException;
 

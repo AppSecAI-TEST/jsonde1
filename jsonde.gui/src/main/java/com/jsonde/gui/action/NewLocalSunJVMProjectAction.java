@@ -11,8 +11,6 @@ import com.jsonde.gui.dialog.project.sun.AttachSunJVMDialog;
 import com.jsonde.gui.dialog.project.sun.SunJVMFieldsPanel;
 import com.jsonde.gui.sdedit.SdEditUIAdapter;
 import net.sf.sdedit.icons.Icons;
-
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.io.File;
 

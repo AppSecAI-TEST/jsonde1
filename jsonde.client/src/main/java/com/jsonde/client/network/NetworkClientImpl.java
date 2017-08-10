@@ -5,12 +5,10 @@ import com.jsonde.api.MessageListener;
 import com.jsonde.api.function.FunctionRequest;
 import com.jsonde.api.function.FunctionResponse;
 import com.jsonde.util.log.Log;
-
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Collection;
 import java.util.Vector;
-import java.util.concurrent.*;
 
 /**
  * Commenti Javadoc

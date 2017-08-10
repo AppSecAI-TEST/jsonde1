@@ -1,7 +1,5 @@
 package com.jsonde.gui.components.listpane;
 
-import javax.swing.*;
-
 /**
  * Commenti Javadoc
  * @author gabriele

@@ -3,8 +3,6 @@ package com.jsonde.gui.action;
 import com.jsonde.gui.ApplicationUserInterface;
 import com.jsonde.gui.profiler.MethodCallProfilerView;
 import com.jsonde.gui.reports.custom.DependencyReport;
-
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 /**

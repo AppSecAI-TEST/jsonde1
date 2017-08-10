@@ -7,8 +7,6 @@ import com.jsonde.gui.reports.Report;
 import com.jsonde.gui.reports.ReportCompositeComponentProvider;
 import com.jsonde.gui.reports.ReportException;
 import com.jsonde.gui.reports.Reports;
-
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 

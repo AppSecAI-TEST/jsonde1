@@ -1,7 +1,6 @@
 package com.jsonde.agent;
 
 import java.io.IOException;
-import java.net.*;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.jar.Attributes;

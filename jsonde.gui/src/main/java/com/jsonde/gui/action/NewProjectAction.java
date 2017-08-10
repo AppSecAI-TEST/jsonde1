@@ -9,8 +9,6 @@ import com.jsonde.gui.dialog.project.FieldsPanel;
 import com.jsonde.gui.dialog.project.NewProjectDialog;
 import com.jsonde.gui.sdedit.SdEditUIAdapter;
 import net.sf.sdedit.icons.Icons;
-
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 /**

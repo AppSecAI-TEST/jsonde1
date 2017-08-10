@@ -1,7 +1,5 @@
 package com.jsonde.gui.components.composite;
 
-import javax.swing.*;
-
 /**
  * Commenti Javadoc
  * @author gabriele

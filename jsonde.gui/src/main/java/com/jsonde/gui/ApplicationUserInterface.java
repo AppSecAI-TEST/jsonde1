@@ -2,9 +2,6 @@ package com.jsonde.gui;
 
 import com.jsonde.client.Client;
 
-import javax.swing.*;
-import java.awt.*;
-
 /**
  * Created by IntelliJ IDEA.
  * User: dmitrybedrin

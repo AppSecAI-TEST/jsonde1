@@ -1,11 +1,5 @@
 package com.jsonde.gui.components.accordion;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.util.LinkedHashSet;
-import java.util.Set;
-
 /**
  * Commenti Javadoc
  * @author gabriele

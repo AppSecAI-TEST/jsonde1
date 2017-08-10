@@ -1,10 +1,7 @@
 package com.jsonde.gui.components.listpane;
 
-import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
-import java.awt.*;
-import java.awt.event.*;
 import java.util.LinkedList;
 import java.util.List;
 

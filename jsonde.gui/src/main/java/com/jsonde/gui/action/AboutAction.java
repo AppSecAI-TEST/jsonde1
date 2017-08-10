@@ -4,8 +4,6 @@ import com.jsonde.gui.ApplicationUserInterface;
 import com.jsonde.gui.dialog.about.AboutDialog;
 import com.jsonde.gui.sdedit.SdEditUIAdapter;
 import net.sf.sdedit.icons.Icons;
-
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 /**

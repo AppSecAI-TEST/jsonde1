@@ -18,6 +18,9 @@ public class Application7 {
 	 */
     private static volatile Throwable exception = new Throwable();
 
+    /**
+     * @trhows Throwable
+     */
     public static void main(String... arguments) throws Throwable {
 
         List<Thread> threads = new ArrayList<Thread>();

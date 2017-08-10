@@ -4,8 +4,6 @@ import com.jsonde.client.Client;
 import com.jsonde.gui.ApplicationUserInterface;
 import com.jsonde.gui.profiler.HeapProfilerView;
 import com.jsonde.gui.reports.custom.DependencyReport;
-
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 /**

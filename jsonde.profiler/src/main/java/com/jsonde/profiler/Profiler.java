@@ -179,6 +179,9 @@ public abstract class Profiler {
 
     }
 
+    /**
+     * Stringa LEAVE_METHOD_METHOD_NAME
+     */
     public static final String LEAVE_METHOD_METHOD_NAME =
             "leaveMethod";
     public static final String LEAVE_METHOD_METHOD_DESCRIPTOR =

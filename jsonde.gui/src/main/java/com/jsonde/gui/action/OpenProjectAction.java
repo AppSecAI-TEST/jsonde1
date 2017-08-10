@@ -7,8 +7,6 @@ import com.jsonde.gui.configuration.SessionConfiguration;
 import com.jsonde.gui.configuration.SessionConfigurationException;
 import com.jsonde.gui.sdedit.SdEditUIAdapter;
 import net.sf.sdedit.icons.Icons;
-
-import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import java.awt.event.ActionEvent;
 import java.io.File;

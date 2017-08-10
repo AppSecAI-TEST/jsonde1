@@ -5,7 +5,7 @@ package com.jsonde.instrumentation;
  * @author gabriele
  *
  */
-public class SkipClassException extends RuntimeException {
+public class SkipClassException {
 
     public SkipClassException() {
     }

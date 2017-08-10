@@ -1,11 +1,5 @@
 package com.jsonde.gui.components;
 
-import javax.swing.*;
-import javax.swing.border.Border;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.MouseListener;
-
 /**
  * Commenti Javadoc
  * @author gabriele
