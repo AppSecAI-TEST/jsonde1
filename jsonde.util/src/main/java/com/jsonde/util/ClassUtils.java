@@ -50,59 +50,6 @@ public class ClassUtils {
         
         File classPathFile = null;
         JarFile jarFile = null;
-
-        for (String classPathElement : classPath.split(pathSeparator)) {
-            System.out.println(classPathElement);
-
-            if (classPathFile.exists()) {
-
-                if (classPathFile.isDirectory()) {
-                    packages.addAll(getPackagesFromDirectory(classPathFile));
-                } else {
-
-                    jarFile = new JarFile(classPathFile, false);
-
-                    Enumeration<JarEntry> jarEntryEnumeration = jarFile.entries();
-
-                    while (jarEntryEnumeration.hasMoreElements()) {
-
-                        JarEntry jarEntry = jarEntryEnumeration.nextElement();
-
-
-                        String jarEntryName = jarEntry.getName();
-
-                        if (jarEntryName.endsWith(".class")&&jarEntryName.contains("/")) {
-
-                            
-
-                                String packageName =
-                                        jarEntryName.
-                                                substring(0, jarEntryName.lastIndexOf("/")).
-                                                replaceAll("/", ".");
-
-                                packages.add(packageName);
-
-                            } else {
-
-                                String packageName =
-                                        jarEntryName.
-                                                substring(0, jarEntryName.length() - ".class".length());
-
-                                packages.add(packageName);
-
-
-                            
-
-                        }
-
-                    }
-
-                }
-
-            }
-
-        }
-
         return packages;
 
     }
