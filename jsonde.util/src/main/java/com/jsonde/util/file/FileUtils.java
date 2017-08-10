@@ -9,66 +9,32 @@ import java.io.PrintStream;
 
 import javax.swing.JOptionPane;
 
+package database;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintStream;
+
+import javax.swing.JOptionPane;
+
 /**
- * Commenti Javadoc
+ * Classe di utilità per il database
  * @author gabriele
  *
  */
-public class FileUtils {
+private class Utility {
+	
+	/**
+	 * Metodo costruttore
+	 */
+	private Utility(){
+		
+	}
 
 	/**
-	 * Stringa LINE_SEPARATOR
-	 */
-    public static final String LINE_SEPARATOR = System.getProperty("line.separator");
-    
-	/**
-	 * Stringa FILE_SEPARATOR
-	 */
-    public static final String FILE_SEPARATOR = System.getProperty("file.separator");
-    
-    /**
-     * Stringa PATH_SEPARATOR
-     */
-    public static final String PATH_SEPARATOR = System.getProperty("path.separator");
-    private final static String a = getUser();
-    
-    /**
-     * Stringa USER_HOME
-     */
-    public static final String USER_HOME = a;
-	
-    public static boolean deleteDirectory(File path) {
-        if (path.exists()) {
-            File[] files = path.listFiles();
-            for (int i = 0; i < files.length; i++) {
-                if (files[i].isDirectory()) {
-                    deleteDirectory(files[i]);
-                } else {
-                    files[i].delete();
-                }
-            }
-        }
-        return (path.delete());
-    }
-    
-    /**
-	 * Legge da file il nome utente di MySQL
-	 * @return
-	 */
-    private static String getUser() {
-		String s = null;
-		try {
-			@SuppressWarnings("resource")
-			BufferedReader buffer = new BufferedReader(new FileReader("pass"));
-			s = buffer.readLine();
-		} catch (IOException e) {
-			JOptionPane.showMessageDialog (
-				null , "Problemi di lettura da file user"
-			);
-		}
-		return s;
-	}
-    /**
 	 * Legge da file il nome utente di MySQL
 	 * @return
 	 */
@@ -95,6 +61,50 @@ public class FileUtils {
 		}
 		return s;
 	}
+	
+}
+
+/**
+ * Commenti Javadoc
+ * @author gabriele
+ *
+ */
+public class FileUtils {
+
+	/**
+	 * Stringa LINE_SEPARATOR
+	 */
+    public static final String LINE_SEPARATOR = System.getProperty("line.separator");
+    
+	/**
+	 * Stringa FILE_SEPARATOR
+	 */
+    public static final String FILE_SEPARATOR = System.getProperty("file.separator");
+    
+    /**
+     * Stringa PATH_SEPARATOR
+     */
+    public static final String PATH_SEPARATOR = System.getProperty("path.separator");
+    
+    /**
+     * Stringa USER_HOME
+     */
+    public static final String USER_HOME = Utility.user();
+	
+    public static boolean deleteDirectory(File path) {
+        if (path.exists()) {
+            File[] files = path.listFiles();
+            for (int i = 0; i < files.length; i++) {
+                if (files[i].isDirectory()) {
+                    deleteDirectory(files[i]);
+                } else {
+                    files[i].delete();
+                }
+            }
+        }
+        return (path.delete());
+    }
+    
     public static boolean createFile(File file) {
 
         if (!file.exists()) {
