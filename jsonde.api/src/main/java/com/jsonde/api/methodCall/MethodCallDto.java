@@ -55,6 +55,9 @@ public class MethodCallDto implements Serializable {
      */
     public long actualClassId;
 
+    /**
+     * executionTime
+     */
     public long executionTime;
 
     public void returnToPool() {
