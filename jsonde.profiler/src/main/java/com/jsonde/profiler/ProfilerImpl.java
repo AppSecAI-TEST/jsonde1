@@ -430,8 +430,6 @@ public class ProfilerImpl extends Profiler implements MessageListener {
     @Override
     public Collection<Long> getProfilerThreadIds() {
 
-        ThreadGroup threadGroup = daemonThreadFactory.getThreadGroup();
-
         Thread[] threads = new Thread[threadGroup.activeCount()];
         threadGroup.enumerate(threads);
 
